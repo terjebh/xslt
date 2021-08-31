@@ -9,4 +9,8 @@
         <bil>Saab 9.3 Turbo</bil>
         <bil>Saab 9.5</bil>
     </merke>
+    <merke fabrikant="Nissan">
+        <bil>Nissan Leaf</bil>
+        <bil>Nissan Qashqai</bil>
+    </merke>
 </biler>
