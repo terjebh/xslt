@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biler>
+    <merke fabrikant="Volvo">
+        <bil>Volvo 240</bil>
+        <bil>Volvo Amazon</bil>
+    </merke>
+    <merke fabrikant="Saab">
+        <bil>Saab 9.3</bil>
+        <bil>Saab 9.3 Turbo</bil>
+        <bil>Saab 9.5</bil>
+    </merke>
+</biler>
