@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="salg.xsl"?>
+<personer>
+	<person id="1" kjønn="M">
+		<fornavn>Donald</fornavn>
+		<etternavn>Duck</etternavn>
+		<epost>donald@disney.com</epost>
+		<fødselsdato>1924-01-23</fødselsdato>
+		<salg>4000</salg>
+		<salg>550</salg>
+		<salg>7600</salg>
+	</person>
+	<person id="3" kjønn="M">
+		<fornavn>Petter</fornavn>
+		<etternavn>Smart</etternavn>
+		<epost>petter@smart.com</epost>
+		<fødselsdato>1924-01-23</fødselsdato>
+		<salg>370</salg>
+		<salg>12000</salg>
+		<salg>7800</salg>
+	</person>
+	<person id="2" kjønn="K">
+		<fornavn>Dolly</fornavn>
+		<etternavn>Duck</etternavn>
+		<epost>daisy@disney.com</epost>
+		<fødselsdato>1931-11-23</fødselsdato>
+		<salg>7800</salg>
+		<salg>4500</salg>
+	</person>
+</personer>
