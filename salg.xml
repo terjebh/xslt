@@ -10,15 +10,6 @@
 		<salg>550</salg>
 		<salg>7600</salg>
 	</person>
-	<person id="3" kjønn="M">
-		<fornavn>Petter</fornavn>
-		<etternavn>Smart</etternavn>
-		<epost>petter@smart.com</epost>
-		<fødselsdato>1924-01-23</fødselsdato>
-		<salg>370</salg>
-		<salg>12000</salg>
-		<salg>7800</salg>
-	</person>
 	<person id="2" kjønn="K">
 		<fornavn>Dolly</fornavn>
 		<etternavn>Duck</etternavn>
@@ -26,5 +17,25 @@
 		<fødselsdato>1931-11-23</fødselsdato>
 		<salg>7800</salg>
 		<salg>4500</salg>
+	</person>
+	<person id="3" kjønn="M">
+		<fornavn>Petter</fornavn>
+		<etternavn>Smart</etternavn>
+		<epost>petter@smart.com</epost>
+		<fødselsdato>1926-05-23</fødselsdato>
+		<salg>370</salg>
+		<salg>12000</salg>
+		<salg>7800</salg>
+	</person>
+	<person id="4" kjønn="K">
+		<fornavn>Minnie</fornavn>
+		<etternavn>Mus</etternavn>
+		<epost>minnie@disney.com</epost>
+		<fødselsdato>1937-10-13</fødselsdato>
+		<salg>4750</salg>
+		<salg>4200</salg>
+		<salg>4200</salg>
+		<salg>4200</salg>
+		<salg>4200</salg>
 	</person>
 </personer>
