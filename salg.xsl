@@ -8,7 +8,7 @@
 		<html>
 			<head>
 				<title>Oversikt over Salg</title>
-				<link rel="stylesheet" href="stiler.css"/>
+				<link rel="stylesheet" href="salg.css"/>
 			</head>
 			<body>
 				<h1>Salgsrapport</h1>

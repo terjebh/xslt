@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="salg.xsl"?>
+<?xml-model href="salg.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <personer>
 	<person id="1" kjønn="M">
 		<fornavn>Donald</fornavn>

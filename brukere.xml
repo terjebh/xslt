@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<brukere>
+
+<bruker id="1">
+<brukernavn>erik</brukernavn>
+<passord>erik123</passord>
+</bruker> 
+
+<bruker id="2">
+<brukernavn>petter</brukernavn>
+<passord>petter123</passord>
+</bruker>
+
+<bruker id="3">
+<brukernavn>anne</brukernavn>
+<passord>anne123</passord>
+</bruker>
+
+</brukere>
