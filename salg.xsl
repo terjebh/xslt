@@ -11,7 +11,7 @@
 				<link rel="stylesheet" href="salg.css"/>
 			</head>
 			<body>
-				<h1>Salgsrapport</h1>
+				<h1>Salgsrapport - <xsl:value-of select="format-date(current-date(),'[D1]. [MNn] [Y1]')"></xsl:value-of>   </h1>
 				<xsl:apply-templates select="personer">
 					<xsl:with-param name="kjønn" select="'M'"/>
 				</xsl:apply-templates>

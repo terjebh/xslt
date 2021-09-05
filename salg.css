@@ -15,9 +15,11 @@ box-shadow: 5px 10px 10px #888;
 font-size: 26px;
 color: #fff;
 text-align: center;
-background-image: url("https://itfakultetet.no/sparebank-1-forsikring.jpg");
+
+/* background-image: url("https://itfakultetet.no/sparebank-1-forsikring.jpg");
 background-repeat: no-repeat;
-background-position: right;
+background-position: right; */
+
 }
 
 h2 {
