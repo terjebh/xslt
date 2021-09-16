@@ -23,6 +23,7 @@
 			</body>
 		</html>
 	</xsl:template>
+	
 	<xsl:template match="personer">
 		<xsl:param name="kjønn" />
 		<xsl:variable name="kjønntext">

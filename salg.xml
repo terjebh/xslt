@@ -39,4 +39,15 @@
 		<salg>4200</salg>
 		<salg>4200</salg>
 	</person>
+	<person id="4" kjønn="M">
+		<fornavn>Mikke</fornavn>
+		<etternavn>Mus</etternavn>
+		<epost>mikke@disney.com</epost>
+		<fødselsdato>1925-05-12</fødselsdato>
+		<salg>4000</salg>
+		<salg>12200</salg>
+		<salg>4200</salg>
+		<salg>4000</salg>
+		<salg>3200</salg>
+	</person>
 </personer>
