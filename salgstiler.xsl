@@ -9,7 +9,7 @@
         <xsl:attribute name="color">red</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="font-family">sans-serif</xsl:attribute>
-        <xsl:attribute name="border-style">solid</xsl:attribute>
+        <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
         <xsl:attribute name="padding-start">0.3em</xsl:attribute>
         <xsl:attribute name="padding-end">0.2em</xsl:attribute>

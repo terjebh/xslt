@@ -10,18 +10,18 @@
 
         <fo:root>
             <fo:layout-master-set>
-                <fo:simple-page-master margin="5mm 10mm 5mm 10mm" master-name="my-page">
+                <fo:simple-page-master margin="5mm 10mm 5mm 10mm" master-name="rapportside">
 
                     <fo:region-body margin="1cm" />
 
                 </fo:simple-page-master>
             </fo:layout-master-set>
 
-            <fo:page-sequence master-reference="my-page">
+            <fo:page-sequence master-reference="rapportside">
                 <fo:flow flow-name="xsl-region-body">
 
                     <fo:block text-align="right">
-                        Side:
+                        Side 
                         <fo:page-number></fo:page-number>
                     </fo:block>
 
@@ -58,7 +58,7 @@
         </xsl:variable>
 
 
-        <fo:block font-size="16pt" font-family="verdana" color="navy" space-before="5mm" space-after="5mm">
+        <fo:block font-size="16pt" font-family="verdana" color="navy" space-before="5mm" space-after="2mm">
             <xsl:value-of select="$kjønntext"></xsl:value-of>
         </fo:block>
 
