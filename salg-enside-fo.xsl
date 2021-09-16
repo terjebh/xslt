@@ -21,13 +21,15 @@
                 <fo:flow flow-name="xsl-region-body">
 
                     <fo:block text-align="right">
-                        Side 
+                        Side
                         <fo:page-number></fo:page-number>
                     </fo:block>
 
-
+                     <fo:block  xsl:use-attribute-sets="logo">
+                        <fo:external-graphic src="img/side_topp.png"  content-width="500pt" />
+                    </fo:block>
+                    
                     <fo:block text-align="center" xsl:use-attribute-sets="main.title">
-                        <fo:external-graphic src="img/logo.png"  content-height="20mm" content-width="20mm" />
                         <xsl:text> Salgsrapport - </xsl:text>
                         <xsl:value-of select="format-date(current-date(),'[D1]. [MNn] [Y1]')"></xsl:value-of>
                     </fo:block>
@@ -58,7 +60,7 @@
         </xsl:variable>
 
 
-        <fo:block font-size="16pt" font-family="verdana" color="navy" space-before="5mm" space-after="2mm">
+        <fo:block font-size="16pt" xsl:use-attribute-sets="main.subtitle">
             <xsl:value-of select="$kjønntext"></xsl:value-of>
         </fo:block>
 
