@@ -38,24 +38,24 @@
                         </fo:block>
                         <xsl:for-each select="avsnitt">
                             <xsl:if test="position()=1">
-                            <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
-                                <xsl:value-of select="."></xsl:value-of>
-                                <xsl:text>:</xsl:text>
-                            </fo:block>
+                                <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
+                                    <xsl:value-of select="."></xsl:value-of>
+                                    <xsl:text>:</xsl:text>
+                                </fo:block>
                             </xsl:if>
-
+                            
                             <xsl:if test="position()>1">
-                            <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
-                                <xsl:value-of select="."></xsl:value-of>
-                            </fo:block>
+                                <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
+                                    <xsl:value-of select="."></xsl:value-of>
+                                </fo:block>
                             </xsl:if>
-
+                            
                         </xsl:for-each>   
+                        
                     </xsl:for-each>
                     
                     <fo:block text-align="center" font-size="15pt" font-weight="bold" span="all"></fo:block>
-                </fo:flow>
-                
+                </fo:flow>                
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
