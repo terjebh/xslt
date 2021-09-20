@@ -5,8 +5,8 @@
 
     <xsl:attribute-set name="logo">
         <xsl:attribute name="text-align">center</xsl:attribute>
-        <xsl:attribute name="padding-start">0.3em</xsl:attribute>
-        <xsl:attribute name="padding-end">0.2em</xsl:attribute>
+        <xsl:attribute name="padding-start">2pt</xsl:attribute>
+        <xsl:attribute name="padding-end">2pt</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>
@@ -44,17 +44,19 @@
         <xsl:attribute name="background-color">#DDDDDD</xsl:attribute>
         <xsl:attribute name="border-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
-        <xsl:attribute name="padding-start">0.3em</xsl:attribute>
-        <xsl:attribute name="padding-end">0.2em</xsl:attribute>
+        <xsl:attribute name="padding-start">2pt</xsl:attribute>
+        <xsl:attribute name="padding-end">2pt</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
+        <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="table.data.td">
         <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="display-align">center</xsl:attribute>
         <xsl:attribute name="border-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
-        <xsl:attribute name="padding-start">0.3em</xsl:attribute>
-        <xsl:attribute name="padding-end">0.2em</xsl:attribute>
+        <xsl:attribute name="padding-start">2pt</xsl:attribute>
+        <xsl:attribute name="padding-end">2pt</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>
@@ -64,8 +66,8 @@
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="border-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
-        <xsl:attribute name="padding-start">0.3em</xsl:attribute>
-        <xsl:attribute name="padding-end">0.2em</xsl:attribute>
+        <xsl:attribute name="padding-start">2pt</xsl:attribute>
+        <xsl:attribute name="padding-end">2pt</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>
