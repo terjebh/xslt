@@ -12,22 +12,23 @@
             <fo:layout-master-set>
                 <fo:simple-page-master margin="5mm 10mm 5mm 10mm" master-name="rapportside">
 
-                    <fo:region-body margin="1cm" />
+                    <fo:region-body xsl:use-attribute-sets="page" />
 
                 </fo:simple-page-master>
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="rapportside">
                 <fo:flow flow-name="xsl-region-body">
+                    <fo:block xsl:use-attribute-sets="logo">
+                        <fo:external-graphic src="img/side_topp.png" content-width="600pt" />
+                    </fo:block>
 
                     <fo:block text-align="right">
                         Side
                         <fo:page-number></fo:page-number>
                     </fo:block>
 
-                    <fo:block xsl:use-attribute-sets="logo">
-                        <fo:external-graphic src="img/side_topp.png" content-width="500pt" />
-                    </fo:block>
+                 
 
                     <fo:block text-align="center" xsl:use-attribute-sets="main.title">
                         <xsl:text> Salgsrapport - </xsl:text>
