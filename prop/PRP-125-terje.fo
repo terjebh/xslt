@@ -80,7 +80,9 @@
    </fo:layout-master-set>
    <fo:page-sequence master-reference="smuss" initial-page-number="1">
       <fo:static-content flow-name="xsl-region-after">
-         <fo:block>Laget med AGP: Tue, 21 Sep 2021 11:15:47 UTC<fo:page-number/>
+         <fo:block>
+                        Laget med AGP:
+                        Tue, 21 Sep 2021 12:34:32 UTC<fo:page-number/>
          </fo:block>
       </fo:static-content>
       <fo:flow flow-name="xsl-region-body" text-align="center">
@@ -247,6 +249,7 @@
                    word-spacing.maximum="150%"
                    word-spacing.optimum="100%">Stortinget vedtok nybygg for det nye un­iversite­tet på Ås og Veterinærinstituttet i samband med revidert nasjonalbudsjett for 2013, jf. Prop. 149 S (2012–2013) og Innst. 470 S (2012–2013). Ved handsaminga av Prop. 20 S (2018–2019) Endrin­ger av statsbudsjettet 2018 for Kommunal- og moderniseringsdepartementet, jf. Innst. 118 S (2018–2019) vart indeksjustert kostnadsramme auka med 150 mill. kroner til 7 203,8 mill. kroner i prisnivå per 1. juli 2018. Prosjektet var då planlagt ferdig 1. halvår 2020. Ved handsaminga av Prop. 1 S (2019–2020), jf. Innst. 16 S (2019–2020), vart kostnadsramma auka med 681,7 mill. kroner til 8 015 mill. kroner, i prisnivå per 1. juli 2020. Ved handsaminga av Prop. 1 S (2020–2021), jf. Innst. 16 S (2020–2021) vart kostnadsramma auka med 335 mill. kroner til 8 350 mill. kroner i prisnivå per 1. juli 2021.</fo:block>
          <fo:block font-family="UniCentury Old Style"
+                   text-indent="5.65mm"
                    text-align="justify"
                    font-weight="normal"
                    font-size="10.678pt"
@@ -347,6 +350,7 @@
                    word-spacing.maximum="150%"
                    word-spacing.optimum="90%">Kost­nads­ram­ma for byg­ge­pro­sjek­tet ved Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet</fo:block>
          <fo:block font-family="UniCentury Old Style"
+                   text-indent="5.65mm"
                    text-align="justify"
                    font-weight="normal"
                    font-size="10.678pt"
@@ -369,6 +373,7 @@
                    word-spacing.maximum="150%"
                    word-spacing.optimum="90%">Kost­nads­ram­ma for brukarutstyr til byg­ge­pro­sjekt ved Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet</fo:block>
          <fo:block font-family="UniCentury Old Style"
+                   text-indent="5.65mm"
                    text-align="justify"
                    font-weight="normal"
                    font-size="10.678pt"
@@ -377,6 +382,7 @@
                    word-spacing.maximum="150%"
                    word-spacing.optimum="90%">Stor­tin­get sam­tyk­ker i at kost­nads­ram­ma for brukarutstyr for Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet vert auka til 1 245 mill. kro­ner, i pris­ni­vå per 1. juli 2021.</fo:block>
          <fo:block font-family="UniCentury Old Style"
+                   text-indent="5.65mm"
                    text-align="justify"
                    font-weight="normal"
                    font-size="10.678pt"
@@ -384,6 +390,7 @@
                    word-spacing.minimum="30%"
                    word-spacing.maximum="150%"
                    word-spacing.optimum="90%"/>
+         <fo:block span="all"/>
       </fo:flow>
    </fo:page-sequence>
 </fo:root>
