@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="smuss"
+                             page-height="29.7cm"
+                             page-width="21.0cm"
+                             margin="2cm"
+                             margin-top="5.5cm"
+                             margin-bottom="1cm"
+                             margin-left="1cm"
+                             margin-right="1cm">
+         <fo:region-body margin="3cm"/>
+         <fo:region-before extent="2cm"/>
+         <fo:region-after extent="2cm"/>
+         <fo:region-start extent="2cm"/>
+         <fo:region-end extent="2cm"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="tittelside"
+                             page-height="29.7cm"
+                             page-width="21.0cm"
+                             margin="2cm"
+                             margin-top="1cm"
+                             margin-bottom="21.4mm"
+                             margin-left="20.5mm"
+                             margin-right="20.5mm">
+         <fo:region-body margin="0cm"
+                         margin-right="0cm"
+                         margin-left="0cm"
+                         margin-top="0cm"
+                         column-count="2"
+                         column-gap="6.35mm"/>
+         <fo:region-before extent="2cm"/>
+         <fo:region-after extent="2cm"/>
+         <fo:region-start extent="2cm"/>
+         <fo:region-end extent="2cm"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="right"
+                             page-height="29.7cm"
+                             page-width="21.0cm"
+                             margin-top="11mm"
+                             margin-bottom="21.4mm"
+                             margin-left="20.5mm"
+                             margin-right="20.5mm">
+         <fo:region-body margin="0cm"
+                         margin-right="0cm"
+                         margin-left="0cm"
+                         margin-top="27mm"
+                         column-count="2"
+                         column-gap="6.35mm"/>
+         <fo:region-before region-name="right-hode" extent="0mm" display-align="after"/>
+         <fo:region-after extent="0cm"/>
+         <fo:region-start extent="0cm"/>
+         <fo:region-end extent="0cm"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="left"
+                             page-height="29.7cm"
+                             page-width="21.0cm"
+                             margin-top="11mm"
+                             margin-bottom="21.4mm"
+                             margin-left="20.5mm"
+                             margin-right="20.5mm">
+         <fo:region-body margin="0cm"
+                         margin-right="0cm"
+                         margin-left="0cm"
+                         margin-top="27mm"
+                         column-count="2"
+                         column-gap="6.35mm"/>
+         <fo:region-before region-name="left-hode" extent="0mm" display-align="after"/>
+         <fo:region-after extent="0cm"/>
+         <fo:region-start extent="0cm"/>
+         <fo:region-end extent="0cm"/>
+      </fo:simple-page-master>
+      <fo:page-sequence-master master-name="hoyre-venstre">
+         <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="tittelside" page-position="first"/>
+            <fo:conditional-page-master-reference master-reference="left" odd-or-even="even"/>
+            <fo:conditional-page-master-reference master-reference="right" odd-or-even="odd"/>
+         </fo:repeatable-page-master-alternatives>
+      </fo:page-sequence-master>
+   </fo:layout-master-set>
+   <fo:page-sequence master-reference="smuss" initial-page-number="1">
+      <fo:static-content flow-name="xsl-region-after">
+         <fo:block>Laget med AGP: Tue, 21 Sep 2021 11:15:47 UTC<fo:page-number/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body" text-align="center">
+         <fo:block font-family="UniMyriad Bold" font-weight="normal" font-size="38pt">Prop. 125 S</fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="16pt">(2020–2021)
+                Proposisjon til Stortinget (forslag til stortingsvedtak)
+            <fo:leader leader-pattern="rule"
+                       leader-length="100%"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"/>
+         </fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="24pt"
+                   line-height="125%">Endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås</fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence master-reference="hoyre-venstre">
+      <fo:static-content flow-name="left-hode">
+         <fo:block-container>
+            <fo:block margin-top="0mm" margin-left="0mm" text-align="left">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="10.678pt">
+                  <fo:page-number/>
+               </fo:inline>
+            </fo:block>
+            <fo:block margin-top="-5.2mm" text-align="center">
+               <fo:inline font-family="UniMyriad Bold"
+                          font-weight="normal"
+                          font-size="10.678pt">Prop. 125 S</fo:inline>
+            </fo:block>
+            <fo:block margin-top="-5mm" text-align="right">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="10.678pt">2020–2021</fo:inline>
+            </fo:block>
+            <fo:block margin-top="0mm" text-align="center">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="8.542pt">Endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås</fo:inline>
+            </fo:block>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="right-hode">
+         <fo:block-container>
+            <fo:block margin-top="0mm" text-align="left">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="10.678pt">2020–2021</fo:inline>
+            </fo:block>
+            <fo:block margin-top="-5.2mm" text-align="center">
+               <fo:inline font-family="UniMyriad Bold"
+                          font-weight="normal"
+                          font-size="10.678pt">Prop. 125 S</fo:inline>
+            </fo:block>
+            <fo:block margin-top="-5mm" margin-left="0mm" text-align="right">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="10.678pt">
+                  <fo:page-number/>
+               </fo:inline>
+            </fo:block>
+            <fo:block margin-top="0mm" text-align="center">
+               <fo:inline font-family="UniCentury Old Style"
+                          font-weight="normal"
+                          font-size="8.542pt">Endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås</fo:inline>
+            </fo:block>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body">
+         <fo:block text-align="center" span="all" margin-bottom="16.3mm">
+            <fo:external-graphic content-height="27.147mm"
+                                 content-width="84.245mm"
+                                 src="url(file:///C:/fop/KMD1KB00.jpg)"/>
+         </fo:block>
+         <fo:block font-family="UniMyriad Bold"
+                   text-align="center"
+                   span="all"
+                   font-weight="normal"
+                   font-size="34.168pt"
+                   line-height="100%">Prop. 125 S</fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   text-align="center"
+                   span="all"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="16pt"
+                   line-height="140%"
+                   margin-bottom="-1.7mm">(2020–2021)
+                Proposisjon til Stortinget (forslag til stortingsvedtak)
+            </fo:block>
+         <fo:block span="all" text-align="center">
+            <fo:leader leader-pattern="rule"
+                       leader-length="100%"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"/>
+         </fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   text-align="center"
+                   span="all"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="21.355pt"
+                   line-height="120%"
+                   margin-top="4.5mm">Endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås</fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   text-align="center"
+                   span="all"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-style="italic"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="23pt"
+                   margin-bottom="25pt">Tilråding frå Kommunal- og moderniseringsdepartementet 26. mars 2021,  
+            godkjend i statsråd same dagen. 
+            (Regjeringa Solberg)</fo:block>
+         <fo:block font-family="UniMyriad Bold"
+                   font-weight="normal"
+                   font-size="12.813pt"
+                   margin-top="13pt"
+                   margin-bottom="-7pt">1 Innleiing</fo:block>
+         <fo:block>
+            <fo:leader leader-pattern="rule"
+                       leader-length="100%"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"/>
+         </fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="100%">Kommunal- og moderniseringsdepartementet gjer i denne proposisjonen framlegg om auka kostnadsrammer for byggjeprosjektet og brukar­utstyrsprosjektet ved Norges miljø- og bioviten­skapelige universitet og Veterinærinstituttet.</fo:block>
+         <fo:block font-family="UniMyriad Bold"
+                   font-weight="normal"
+                   font-size="12.813pt"
+                   margin-top="13pt"
+                   margin-bottom="-7pt">2 Framlegg til endringar</fo:block>
+         <fo:block>
+            <fo:leader leader-pattern="rule"
+                       leader-length="100%"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"/>
+         </fo:block>
+         <fo:block font-family="UniMyriad Bold"
+                   font-weight="normal"
+                   font-size="11.211pt"
+                   line-height="114%"
+                   margin-top="10pt">2.1 Kostnadsramma for byggjeprosjektet</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="100%">Stortinget vedtok nybygg for det nye un­iversite­tet på Ås og Veterinærinstituttet i samband med revidert nasjonalbudsjett for 2013, jf. Prop. 149 S (2012–2013) og Innst. 470 S (2012–2013). Ved handsaminga av Prop. 20 S (2018–2019) Endrin­ger av statsbudsjettet 2018 for Kommunal- og moderniseringsdepartementet, jf. Innst. 118 S (2018–2019) vart indeksjustert kostnadsramme auka med 150 mill. kroner til 7 203,8 mill. kroner i prisnivå per 1. juli 2018. Prosjektet var då planlagt ferdig 1. halvår 2020. Ved handsaminga av Prop. 1 S (2019–2020), jf. Innst. 16 S (2019–2020), vart kostnadsramma auka med 681,7 mill. kroner til 8 015 mill. kroner, i prisnivå per 1. juli 2020. Ved handsaminga av Prop. 1 S (2020–2021), jf. Innst. 16 S (2020–2021) vart kostnadsramma auka med 335 mill. kroner til 8 350 mill. kroner i prisnivå per 1. juli 2021.</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="100%">Pandemien gjer at framdrifta i prosjektet er forseinka. Reglar som avgrensar innreise og krav om auka avstand på byggjeplass seinkar framdrifta, testinga og dei avsluttande arbeida på byggjeprosjektet. Dette gjer at prosjektet får auka kostnadar. Innflyttinga tok til i desember 2020 og vert avslutta i 2. kvartal 2021. Regjeringa gjer framlegg om å auke kostnadsramma for prosjektet med 150 mill. kroner til 8 500 mill. kroner i prisnivå pr 1. juli 2021 for å ha naudsynte midlar til å gjere prosjektet ferdig. Regjeringa kjem attende til Stortinget med framlegg til finansiering av dei auka kostnadane i samband med Revidert nasjonalbudsjett for 2021.</fo:block>
+         <fo:block font-family="UniMyriad Bold"
+                   font-weight="normal"
+                   font-size="11.211pt"
+                   line-height="114%"
+                   margin-top="10pt">2.2 Kostnadsramma for brukarutstyrsprosjektet</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="100%">Ved handsaminga av statsbudsjettet for 2015 vedtok Stortinget ei kostnadsramme på 1 080 mill. kroner for brukarutstyr til det nye universitetet på Ås og til Veterinærinstituttet, jf. Prop. 1 S og Innst. 16 S (2014–2015). Indeksjustert kostnadsramme er no 1 220 mill. kroner. Pandemien og reglar som avgrensar innreise gjer leveringa av brukarutstyr forseinka. Montering, testing og klargjering av brukarutstyret er forseinka. Regjeringa gjer difor framlegg om å auke kostnadsramma med 25 mill. kroner til 1 245 mill. kroner. Regjeringa kjem attende til Stortinget med framlegg til finansiering av dei auka kostnadane i samband med Revidert nasjonalbudsjett for 2021.</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="100%"
+                   start-indent="5.65mm"
+                   margin-top="12.813pt">Kommunal- og moderniseringsdepartementet</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="center"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="100%"
+                   letter-spacing="5pt"
+                   margin-top="12.813pt">tilrår:</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="12.813pt">At Dykkar Majestet godkjenner og skriv under eit framlagt forslag til proposisjon til Stortinget om endringar i kostnadsrammer for sam­lokali­serings­pro­sjek­tet ved Campus Ås.</fo:block>
+         <fo:block span="all" text-align="center">
+            <fo:leader leader-pattern="rule"
+                       leader-length="36mm"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"/>
+         </fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="12.813pt">
+                    Vi HARALD, Noregs Konge,</fo:block>
+         <fo:block span="all"
+                   text-align="center"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   letter-spacing="5pt"
+                   margin-top="12.813pt">stadfester:</fo:block>
+         <fo:block span="all"
+                   font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="12.813pt">Stortinget blir bedt om å gjere vedtak om endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås i samsvar med eit vedlagt forslag.</fo:block>
+         <fo:block span="all" text-align="center">
+            <fo:leader leader-pattern="rule"
+                       leader-length="36mm"
+                       rule-style="solid"
+                       rule-thickness="0.5pt"
+                       margin-top="12.813pt"/>
+         </fo:block>
+         <fo:block linefeed-treatment="preserve"
+                   text-align="center"
+                   span="all"
+                   font-family="UniMyriad Bold"
+                   font-weight="normal"
+                   font-size="17.084pt"
+                   line-height="120%"
+                   margin-top="0pt">
+                Forslag 
+                
+         til vedtak om endringar i kostnadsrammer for samlokaliseringsprosjektet ved Campus Ås       </fo:block>
+         <fo:block text-align="center"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="12.813pt">I</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="90%">Kost­nads­ram­ma for byg­ge­pro­sjek­tet ved Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="90%">Stor­tin­get sam­tyk­ker i at kost­nads­ram­ma for byg­ge­pro­sjek­tet ved Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet vert auka til 8 500 mill. kro­ner, i pris­ni­vå per 1. juli 2021.</fo:block>
+         <fo:block text-align="center"
+                   font-family="UniCentury Old Style"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   margin-top="12.813pt">II</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="90%">Kost­nads­ram­ma for brukarutstyr til byg­ge­pro­sjekt ved Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="90%">Stor­tin­get sam­tyk­ker i at kost­nads­ram­ma for brukarutstyr for Norges mil­jø- og bio­vi­ten­ska­pe­li­ge uni­ver­si­tet og Ve­te­ri­nær­in­sti­tut­tet vert auka til 1 245 mill. kro­ner, i pris­ni­vå per 1. juli 2021.</fo:block>
+         <fo:block font-family="UniCentury Old Style"
+                   text-align="justify"
+                   font-weight="normal"
+                   font-size="10.678pt"
+                   line-height="120%"
+                   word-spacing.minimum="30%"
+                   word-spacing.maximum="150%"
+                   word-spacing.optimum="90%"/>
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>
