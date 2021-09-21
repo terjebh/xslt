@@ -5,32 +5,28 @@
 
     <xsl:include href="salgstiler.xsl" />
 
-    <xsl:preserve-space elements="*" />
     <xsl:template match="/">
 
         <fo:root>
             <fo:layout-master-set>
-                <fo:simple-page-master margin="5mm 10mm 5mm 10mm" master-name="rapportside">
-
-                    <fo:region-body xsl:use-attribute-sets="page" />
-
+                <fo:simple-page-master xsl:use-attribute-sets="side" master-name="rapportside">
+                    <fo:region-body />
                 </fo:simple-page-master>
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="rapportside">
                 <fo:flow flow-name="xsl-region-body">
                     <fo:block xsl:use-attribute-sets="logo">
-                        <fo:external-graphic src="img/side_topp.png" content-width="600pt" />
+                        <fo:external-graphic src="../img/side_topp.png" content-width="600pt" margin="0mm" space-before="0mm" />
                     </fo:block>
 
-                    <fo:block text-align="right">
+                    <fo:block xsl:use-attribute-sets="sidenummer">
                         Side
                         <fo:page-number></fo:page-number>
                     </fo:block>
 
-                 
 
-                    <fo:block text-align="center" xsl:use-attribute-sets="main.title">
+                    <fo:block xsl:use-attribute-sets="hovedtittel">
                         <xsl:text> Salgsrapport - </xsl:text>
                         <xsl:value-of select="format-date(current-date(),'[D1]. [MNn] [Y1]')"></xsl:value-of>
                     </fo:block>
@@ -45,6 +41,9 @@
                     <xsl:apply-templates select="personer">
                         <xsl:with-param name="kjønn" select="'K'" />
                     </xsl:apply-templates>
+
+                    <xsl:call-template name="selgere" />
+
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
@@ -61,7 +60,7 @@
         </xsl:variable>
 
 
-        <fo:block font-size="16pt" xsl:use-attribute-sets="main.subtitle">
+        <fo:block xsl:use-attribute-sets="undertittel">
             <xsl:value-of select="$kjønntext"></xsl:value-of>
         </fo:block>
 
@@ -160,5 +159,31 @@
 
 
     </xsl:template>
+
+
+    <xsl:template name="selgere">
+
+        <fo:block xsl:use-attribute-sets="hovedtittel">
+            <xsl:text>Selgere</xsl:text>
+        </fo:block>
+
+        <xsl:for-each select="personer/person">
+            <xsl:sort select="etternavn" />
+            <xsl:sort select="fornavn" />
+
+            <fo:block xsl:use-attribute-sets="undertittel">
+                <xsl:value-of select="concat(fornavn,' ',etternavn)"></xsl:value-of>
+            </fo:block>
+
+            <fo:block xsl:use-attribute-sets="table.data.td">
+                Salg: <xsl:value-of select="salg"></xsl:value-of>
+            </fo:block>
+
+
+        </xsl:for-each>
+
+
+    </xsl:template>
+
 
 </xsl:stylesheet>

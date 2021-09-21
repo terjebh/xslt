@@ -3,32 +3,38 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
     <xsl:output method="xml" />
 
-    <xsl:attribute-set name="page">
+    <xsl:attribute-set name="side">
         <xsl:attribute name="margin-top">0mm</xsl:attribute>
         <xsl:attribute name="margin-bottom">0.5cm</xsl:attribute>
-        <xsl:attribute name="margin-left">0.5cm</xsl:attribute>
-        <xsl:attribute name="margin-right">0.5cm</xsl:attribute>
+        <xsl:attribute name="margin-left">1cm</xsl:attribute>
+        <xsl:attribute name="margin-right">1cm</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="logo">
+        <xsl:attribute name="margin">0mm</xsl:attribute>
         <xsl:attribute name="text-align">center</xsl:attribute>
+        <xsl:attribute name="border-width">0mm</xsl:attribute>
     </xsl:attribute-set>
 
+    <xsl:attribute-set name="sidenummer">
+        <xsl:attribute name="text-align">right</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+    </xsl:attribute-set>
 
-    <xsl:attribute-set name="main.title">
+    <xsl:attribute-set name="hovedtittel">
+        <xsl:attribute name="text-align">center</xsl:attribute>
         <xsl:attribute name="font-size">18pt</xsl:attribute>
         <xsl:attribute name="color">#194189</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="font-family">sans-serif</xsl:attribute>
         <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
-        <xsl:attribute name="padding-start">0.3em</xsl:attribute>
-        <xsl:attribute name="padding-end">0.2em</xsl:attribute>
+        <xsl:attribute name="margin-top">5mm</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>
 
-    <xsl:attribute-set name="main.subtitle">
+    <xsl:attribute-set name="undertittel">
         <xsl:attribute name="font-size">14pt</xsl:attribute>
         <xsl:attribute name="color">#194189</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
