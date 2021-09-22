@@ -12,6 +12,39 @@
                 <fo:simple-page-master xsl:use-attribute-sets="side" master-name="rapportside">
                     <fo:region-body />
                 </fo:simple-page-master>
+
+                <fo:simple-page-master master-name="tittelside" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="1cm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="0cm" column-count="2" column-gap="6.35mm" />
+                    <fo:region-before extent="2cm" />
+                    <fo:region-after extent="2cm" />
+                    <fo:region-start extent="2cm" />
+                    <fo:region-end extent="2cm" />
+                </fo:simple-page-master>
+
+                <fo:simple-page-master master-name="right" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
+                    <fo:region-before region-name="right-hode" extent="0mm" display-align="after" />
+                    <fo:region-after extent="0cm" />
+                    <fo:region-start extent="0cm" />
+                    <fo:region-end extent="0cm" />
+                </fo:simple-page-master>
+
+                <fo:simple-page-master master-name="left" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
+                    <fo:region-before region-name="left-hode" extent="0mm" display-align="after" />
+                    <fo:region-after extent="0cm" />
+                    <fo:region-start extent="0cm" />
+                    <fo:region-end extent="0cm" />
+                </fo:simple-page-master>
+
+                <fo:page-sequence-master master-name="hoyre-venstre">
+                    <fo:repeatable-page-master-alternatives>
+                        <fo:conditional-page-master-reference master-reference="tittelside" page-position="first" />
+                        <fo:conditional-page-master-reference master-reference="left" odd-or-even="even" />
+                        <fo:conditional-page-master-reference master-reference="right" odd-or-even="odd" />
+                    </fo:repeatable-page-master-alternatives>
+                </fo:page-sequence-master>
+                
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="rapportside">

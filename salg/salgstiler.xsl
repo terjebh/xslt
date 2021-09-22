@@ -8,6 +8,7 @@
         <xsl:attribute name="margin-bottom">0.5cm</xsl:attribute>
         <xsl:attribute name="margin-left">1cm</xsl:attribute>
         <xsl:attribute name="margin-right">1cm</xsl:attribute>
+        <xsl:attribute name="page-height">29.7cm</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="logo">
