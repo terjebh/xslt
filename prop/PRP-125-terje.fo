@@ -82,7 +82,7 @@
       <fo:static-content flow-name="xsl-region-after">
          <fo:block>
                         Laget med AGP:
-                        Tue, 21 Sep 2021 15:52:35 UTC<fo:page-number/>
+                        Fri, 24 Sep 2021 12:44:06 UTC<fo:page-number/>
          </fo:block>
       </fo:static-content>
       <fo:flow flow-name="xsl-region-body" text-align="center">

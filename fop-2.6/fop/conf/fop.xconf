@@ -30,6 +30,7 @@ the location of this file.
   <!-- Uses renderer mime type for renderers -->
   <renderers>
     <renderer mime="application/pdf">
+
       <filterList>
         <!-- provides compression using zlib flate (default is on) -->
         <value>flate</value>
@@ -44,6 +45,19 @@ the location of this file.
       </filterList>
 
       <fonts>
+
+
+        <!-- specific font mapping -->
+        <font kerning="yes" embed-url="../fonts/Century-Old-Style-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="Century Old Style" style="normal" weight="normal"/>
+        </font>
+        <font kerning="yes" embed-url="../fonts/CenturyOldStyleBoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="Century Old Style" style="italic" weight="normal"/>
+        </font>
+
+        <!-- "bulk" font mapping -->
+        <directory>../fonts</directory>
+
         <!-- embedded fonts -->
         <!--
         This information must exactly match the font specified
