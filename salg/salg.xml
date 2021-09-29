@@ -7,80 +7,80 @@
 		<etternavn>Duck</etternavn>
 		<epost>donald@disney.com</epost>
 		<fødselsdato>1924-01-23</fødselsdato>
-		<salg>4000</salg>
-		<salg>550</salg>
-		<salg>7600</salg>
+		<salg type="Programmering">4000</salg>
+		<salg type="Rådgivning"> 550</salg>
+		<salg type="Programmering">7600</salg>
 	</person>
 	<person id="2" kjønn="K">
 		<fornavn>Dolly</fornavn>
 		<etternavn>Duck</etternavn>
 		<epost>daisy@disney.com</epost>
 		<fødselsdato>1931-11-23</fødselsdato>
-		<salg>7800</salg>
-		<salg>4500</salg>
+		<salg type="Design">7800</salg>
+		<salg type="Programmering">4500</salg>
 	</person>
 	<person id="3" kjønn="M">
 		<fornavn>Petter</fornavn>
 		<etternavn>Smart</etternavn>
 		<epost>petter@smart.com</epost>
 		<fødselsdato>1926-05-23</fødselsdato>
-		<salg>370</salg>
-		<salg>12000</salg>
-		<salg>7800</salg>
+		<salg type="Rådgivning">370</salg>
+		<salg type="Programmering">12000</salg>
+		<salg type="Programmering">7800</salg>
 	</person>
 	<person id="4" kjønn="K">
 		<fornavn>Minnie</fornavn>
 		<etternavn>Mus</etternavn>
 		<epost>minnie@disney.com</epost>
 		<fødselsdato>1937-10-13</fødselsdato>
-		<salg>4750</salg>
-		<salg>4200</salg>
-		<salg>4200</salg>
-		<salg>4200</salg>
-		<salg>4200</salg>
+		<salg type="Design">4750</salg>
+		<salg type="Programmering">4200</salg>
+		<salg type="Design">4200</salg>
+		<salg type="Design">4200</salg>
+		<salg type="Design">4200</salg>
 	</person>
 	<person id="5" kjønn="M">
 		<fornavn>Mikke</fornavn>
 		<etternavn>Mus</etternavn>
 		<epost>mikke@disney.com</epost>
 		<fødselsdato>1925-05-12</fødselsdato>
-		<salg>4000</salg>
-		<salg>12200</salg>
-		<salg>4200</salg>
-		<salg>4000</salg>
-		<salg>3200</salg>
+		<salg type="Design">4000</salg>
+		<salg type="Programmering">12200</salg>
+		<salg type="Design">4200</salg>
+		<salg type="Design">4000</salg>
+		<salg type="Rådgivning">3200</salg>
 	</person>
 	<person id="6" kjønn="M">
 		<fornavn>Ole</fornavn>
 		<etternavn>Duck</etternavn>
 		<epost>ole.duck@disney.com</epost>
 		<fødselsdato>1940-03-11</fødselsdato>
-		<salg>4000</salg>
-		<salg>12200</salg>
-		<salg>4200</salg>
-		<salg>4000</salg>
-		<salg>3200</salg>
+		<salg type="Design">4000</salg>
+		<salg type="Programmering">12200</salg>
+		<salg type="Programmering">4200</salg>
+		<salg type="Design">4000</salg>
+		<salg type="Design">3200</salg>
 	</person>
 	<person id="7" kjønn="M">
 		<fornavn>Dole</fornavn>
 		<etternavn>Duck</etternavn>
 		<epost>dole.duck@disney.com</epost>
 		<fødselsdato>1940-03-11</fødselsdato>
-		<salg>11000</salg>
-		<salg>12800</salg>
-		<salg>4900</salg>
-		<salg>4300</salg>
-		<salg>13200</salg>
+		<salg type="Programmering">11000</salg>
+		<salg type="Programmering">12800</salg>
+		<salg type="Design">4900</salg>
+		<salg type="Design">4300</salg>
+		<salg type="Rådgivning">13200</salg>
 	</person>
 	<person id="8" kjønn="M">
 		<fornavn>Doffen</fornavn>
 		<etternavn>Duck</etternavn>
 		<epost>doffen.duck@disney.com</epost>
 		<fødselsdato>1940-03-11</fødselsdato>
-		<salg>4100</salg>
-		<salg>12200</salg>
-		<salg>6100</salg>
-		<salg>4700</salg>
-		<salg>3900</salg>
+		<salg type="Design">4100</salg>
+		<salg type="Programmering">12200</salg>
+		<salg type="Programmering">6100</salg>
+		<salg type="Design">4700</salg>
+		<salg type="Design">3900</salg>
 	</person>
 </personer>

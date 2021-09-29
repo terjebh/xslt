@@ -8,7 +8,7 @@
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="content">
-                    <fo:region-body region-name="body" margin="5cm,5cm,5cm,0cm" column-count="2" />
+                    <fo:region-body region-name="body" margin="5cm,5cm,5cm,5cm" column-count="2" />
                     <fo:region-before extent="10mm" background-color="yellow" />
                     <fo:region-after extent="10mm" background-color="green" />
                     <fo:region-start extent="10mm" background-color="silver" />
@@ -17,6 +17,7 @@
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="content">
+                <fo:fixed-content ></fo:fixed-content>
 
                 <fo:flow flow-name="body">
                     <fo:block text-align="right" span="all">

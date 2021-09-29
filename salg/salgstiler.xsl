@@ -3,14 +3,33 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
     <xsl:output method="xml" />
 
-    <xsl:attribute-set name="side">
-        <xsl:attribute name="margin-top">0mm</xsl:attribute>
-        <xsl:attribute name="margin-bottom">0.5cm</xsl:attribute>
-        <xsl:attribute name="margin-left">1cm</xsl:attribute>
-        <xsl:attribute name="margin-right">1cm</xsl:attribute>
+    <xsl:attribute-set name="tittelside">
         <xsl:attribute name="page-height">29.7cm</xsl:attribute>
+        <xsl:attribute name="page-width">21.0cm</xsl:attribute>
+        <xsl:attribute name="margin-top">0cm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">0cm</xsl:attribute>
+        <xsl:attribute name="margin-left">0cm</xsl:attribute>
+        <xsl:attribute name="margin-right">0cm</xsl:attribute>
     </xsl:attribute-set>
 
+    <xsl:attribute-set name="venstreside">
+        <xsl:attribute name="page-height">29.7cm</xsl:attribute>
+        <xsl:attribute name="page-width">21.0cm</xsl:attribute>
+        <xsl:attribute name="margin-top">0cm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">0cm</xsl:attribute>
+        <xsl:attribute name="margin-left">0cm</xsl:attribute>
+        <xsl:attribute name="margin-right">0cm</xsl:attribute>
+    </xsl:attribute-set>
+
+    <xsl:attribute-set name="høyreside">
+        <xsl:attribute name="page-height">29.7cm</xsl:attribute>
+        <xsl:attribute name="page-width">21.0cm</xsl:attribute>
+        <xsl:attribute name="margin-top">0cm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">0cm</xsl:attribute>
+        <xsl:attribute name="margin-left">0cm</xsl:attribute>
+        <xsl:attribute name="margin-right">0cm</xsl:attribute>
+    </xsl:attribute-set>
+    
     <xsl:attribute-set name="logo">
         <xsl:attribute name="margin">0mm</xsl:attribute>
         <xsl:attribute name="text-align">center</xsl:attribute>
@@ -31,6 +50,7 @@
         <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
         <xsl:attribute name="border-width">1pt</xsl:attribute>
         <xsl:attribute name="margin-top">5mm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">5mm</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
     </xsl:attribute-set>

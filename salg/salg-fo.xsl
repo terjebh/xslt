@@ -9,56 +9,55 @@
 
         <fo:root>
             <fo:layout-master-set>
-                <fo:simple-page-master xsl:use-attribute-sets="side" master-name="rapportside">
-                    <fo:region-body />
-                </fo:simple-page-master>
 
-                <fo:simple-page-master master-name="tittelside" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="1cm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
-                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="0cm" column-count="2" column-gap="6.35mm" />
-                    <fo:region-before extent="2cm" />
+                <fo:simple-page-master master-name="tittelside" xsl:use-attribute-sets="tittelside">
+                    <fo:region-body margin="3cm,1.5cm,3cm,1.5cm" />
+                    <fo:region-before extent="3cm" />
                     <fo:region-after extent="2cm" />
                     <fo:region-start extent="2cm" />
                     <fo:region-end extent="2cm" />
                 </fo:simple-page-master>
 
-                <fo:simple-page-master master-name="right" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
-                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
-                    <fo:region-before region-name="right-hode" extent="0mm" display-align="after" />
-                    <fo:region-after extent="0cm" />
-                    <fo:region-start extent="0cm" />
-                    <fo:region-end extent="0cm" />
+                <fo:simple-page-master master-name="venstreside" xsl:use-attribute-sets="venstreside">
+                    <fo:region-body margin="3cm,2.5cm,3cm,1.5cm" column-count="2" column-gap="6.35mm" />
+                    <fo:region-before extent="3cm" />
+                    <fo:region-after extent="2cm" />
+                    <fo:region-start extent="2cm" />
+                    <fo:region-end extent="2cm" />
                 </fo:simple-page-master>
 
-                <fo:simple-page-master master-name="left" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
-                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
-                    <fo:region-before region-name="left-hode" extent="0mm" display-align="after" />
-                    <fo:region-after extent="0cm" />
-                    <fo:region-start extent="0cm" />
-                    <fo:region-end extent="0cm" />
+                <fo:simple-page-master master-name="høyreside" xsl:use-attribute-sets="høyreside">
+                    <fo:region-body margin="3cm,1.5cm,3cm,2.5cm" column-count="2" column-gap="6.35mm" />
+                    <fo:region-before extent="3cm" />
+                    <fo:region-after extent="2cm" />
+                    <fo:region-start extent="2cm" />
+                    <fo:region-end extent="2cm" />
                 </fo:simple-page-master>
 
-                <fo:page-sequence-master master-name="hoyre-venstre">
+                <fo:page-sequence-master master-name="hovedlayout">
                     <fo:repeatable-page-master-alternatives>
                         <fo:conditional-page-master-reference master-reference="tittelside" page-position="first" />
-                        <fo:conditional-page-master-reference master-reference="left" odd-or-even="even" />
-                        <fo:conditional-page-master-reference master-reference="right" odd-or-even="odd" />
+                        <fo:conditional-page-master-reference master-reference="venstreside" odd-or-even="even" />
+                        <fo:conditional-page-master-reference master-reference="høyreside" odd-or-even="odd" />
                     </fo:repeatable-page-master-alternatives>
                 </fo:page-sequence-master>
-                
+
             </fo:layout-master-set>
 
-            <fo:page-sequence master-reference="rapportside">
-                <fo:flow flow-name="xsl-region-body">
+            <fo:page-sequence master-reference="hovedlayout">
+
+                <fo:static-content flow-name="xsl-region-before">
                     <fo:block xsl:use-attribute-sets="logo">
-                        <fo:external-graphic src="../img/side_topp.png" content-width="600pt" margin="0mm" space-before="0mm" />
+                        <fo:external-graphic src="img/side_topp.png" content-width="600pt" margin="0mm" space-before="0mm" />
                     </fo:block>
 
                     <fo:block xsl:use-attribute-sets="sidenummer">
                         Side
-                        <fo:page-number></fo:page-number>
+                        <fo:page-number />
                     </fo:block>
+                </fo:static-content>
 
-
+                <fo:flow flow-name="xsl-region-body">
                     <fo:block xsl:use-attribute-sets="hovedtittel">
                         <xsl:text> Salgsrapport - </xsl:text>
                         <xsl:value-of select="format-date(current-date(),'[D1]. [MNn] [Y1]')"></xsl:value-of>
@@ -75,14 +74,15 @@
                         <xsl:with-param name="kjønn" select="'K'" />
                     </xsl:apply-templates>
 
-                    <xsl:call-template name="selgere" />
+                    <fo:block page-break-after="always" />
 
+                    <xsl:call-template name="selgere" />
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
-
     </xsl:template>
 
+    <!-- Sidemaler-->
     <xsl:template match="personer">
 
         <xsl:param name="kjønn" />
@@ -152,7 +152,7 @@
                         </fo:table-cell>
                         <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.td">
                             <fo:block>
-                                <xsl:value-of select="sum(salg)" />
+                                <xsl:value-of select="sum(salg)" /> kr.
                             </fo:block>
                         </fo:table-cell>
                         <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.td">
@@ -176,12 +176,12 @@
 
                     <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.bunnlinje">
                         <fo:block>
-                            <xsl:value-of select="sum(person[@kjønn=$kjønn]/salg)" />
+                            <xsl:value-of select="sum(person[@kjønn=$kjønn]/salg)" /> kr.
                         </fo:block>
                     </fo:table-cell>
                     <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.bunnlinje">
                         <fo:block>
-                            <xsl:value-of select="count(person[@kjønn=$kjønn]/salg)" />
+                            <xsl:value-of select="count(person[@kjønn=$kjønn]/salg)" /> 
                         </fo:block>
                     </fo:table-cell>
 
@@ -193,10 +193,10 @@
 
     </xsl:template>
 
-
+    <!-- Sidemal for individuelle selgere-->
     <xsl:template name="selgere">
 
-        <fo:block xsl:use-attribute-sets="hovedtittel">
+        <fo:block xsl:use-attribute-sets="hovedtittel" span="all">
             <xsl:text>Selgere</xsl:text>
         </fo:block>
 
@@ -204,14 +204,71 @@
             <xsl:sort select="etternavn" />
             <xsl:sort select="fornavn" />
 
-            <fo:block xsl:use-attribute-sets="undertittel">
-                <xsl:value-of select="concat(fornavn,' ',etternavn)"></xsl:value-of>
+
+            <fo:block-container keep-together="always">
+                <fo:block xsl:use-attribute-sets="undertittel" keep-with-next="auto">
+                    <xsl:value-of select="concat(fornavn,' ',etternavn)"></xsl:value-of>
+                </fo:block>
+
+                <fo:block>
+                Salg:
             </fo:block>
 
-            <fo:block xsl:use-attribute-sets="table.data.td">
-                Salg: <xsl:value-of select="salg"></xsl:value-of>
-            </fo:block>
+                <fo:block>
+                    <!-- Tabell for hver selgers salg-->
+                    <fo:table table-layout="fixed" width="100%">
 
+                        <fo:table-header>
+                            <fo:table-row>
+                                <fo:table-cell xsl:use-attribute-sets="table.data.th">
+                                    <fo:block>Type</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell xsl:use-attribute-sets="table.data.th">
+                                    <fo:block>Beløp</fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </fo:table-header>
+
+                        <fo:table-body>
+                            <xsl:for-each select="salg">
+                                <fo:table-row>
+                                    <fo:table-cell xsl:use-attribute-sets="table.data.td">
+                                        <fo:block>
+                                            <xsl:value-of select="@type" />
+                                        </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell xsl:use-attribute-sets="table.data.td">
+                                        <fo:block text-align="right">
+                                            <xsl:value-of select="." />
+                                            kr.
+                                        </fo:block>
+                                    </fo:table-cell>
+                                </fo:table-row>
+
+                            </xsl:for-each>
+
+
+                            <fo:table-row>
+                                <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.bunnlinje">
+                                    <fo:block>
+                                Totalt salg: 
+                             </fo:block>
+                                </fo:table-cell>
+
+                                <fo:table-cell text-align="right" xsl:use-attribute-sets="table.data.bunnlinje">
+                                    <fo:block>
+                                        <xsl:value-of select="sum(salg)" />
+                                        kr.
+                                    </fo:block>
+                                </fo:table-cell>
+
+                            </fo:table-row>
+                        </fo:table-body>
+
+                    </fo:table>
+
+                </fo:block>
+            </fo:block-container>
 
         </xsl:for-each>
 
