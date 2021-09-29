@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
     <xs:element name="personer">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="person" type="person" maxOccurs="unbounded" minOccurs="1"></xs:element>
+                <xs:element name="person" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fornavn" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+                            <xs:element name="etternavn" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+                            <xs:element name="epost" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
+                            <xs:element name="fødselsdato" type="xs:date" maxOccurs="1" minOccurs="0"></xs:element>
+                            <xs:element name="salg" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                    <xs:attribute name="type" />
+                                </xs:extension>
+                                </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer"></xs:attribute>
+                        <xs:attribute name="kjønn" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="person">
-        <xs:sequence>
-            <xs:element name="fornavn" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-            <xs:element name="etternavn" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-            <xs:element name="epost" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
-            <xs:element name="fødselsdato" type="xs:date" maxOccurs="1" minOccurs="0"></xs:element>
-            <xs:sequence>
-                <xs:element name="salg" maxOccurs="unbounded" minOccurs="0"></xs:element>
-            </xs:sequence>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:integer"></xs:attribute>
-        <xs:attribute name="kjønn" type="xs:string"></xs:attribute>
-    </xs:complexType>
+
 </xs:schema>
