@@ -237,7 +237,7 @@
 
             <fo:table-body>
 
-                <!-- Iterer over tjenestetyper og lag en tabellrad for hver type-->
+                <!-- Itererer over tjenestetyper og lager en tabellrad for hver type-->
                 <xsl:for-each-group select="/personer/person/salg" group-by="@type">
                     <fo:table-row>
 
@@ -297,7 +297,6 @@
         <xsl:for-each select="personer/person">
             <xsl:sort select="etternavn" />
             <xsl:sort select="fornavn" />
-
 
             <fo:block-container keep-together="always">
                 <fo:block xsl:use-attribute-sets="undertittel" keep-with-next="always">
@@ -366,8 +365,6 @@
 
         </xsl:for-each>
 
-
     </xsl:template>
-
 
 </xsl:stylesheet>
