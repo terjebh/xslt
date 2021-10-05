@@ -18,7 +18,8 @@
 
         <fo:static-content flow-name="xsl-region-before">
           <fo:block text-align="right" margin-right="0.5cm" margin-top="0.5cm">
-            Side <fo:page-number />
+            Side
+            <fo:page-number />
           </fo:block>
         </fo:static-content>
 
@@ -42,6 +43,11 @@
           <xsl:apply-templates select="ol">
             <xsl:with-param name="nummer" select="'I'" />
           </xsl:apply-templates>
+          <!-- Liste med *-nummerering-->
+          <xsl:apply-templates select="ol">
+            <xsl:with-param name="nummer" select="'*'" />
+          </xsl:apply-templates>
+
 
         </fo:flow>
       </fo:page-sequence>
@@ -52,15 +58,22 @@
   <xsl:template match="ol">
     <xsl:param name="nummer" />
     <fo:block>
-      Nummerering: 
+      Nummerering:
       <xsl:value-of select="$nummer"></xsl:value-of>
     </fo:block>
-    <fo:list-block provisional-distance-between-starts="15mm" provisional-label-separation="5mm" space-after="1cm">
+    <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="50mm" space-after="1cm">
       <xsl:for-each select="item">
         <fo:list-item>
           <fo:list-item-label start-indent="5mm" end-indent="label-end()">
             <fo:block>
-              <xsl:number format="{$nummer}" />
+              <xsl:choose>
+                <xsl:when test="$nummer='*'">
+                  *
+              </xsl:when>
+                <xsl:otherwise>
+                  <xsl:number format="{$nummer}" />
+                </xsl:otherwise>
+              </xsl:choose>
             </fo:block>
           </fo:list-item-label>
           <fo:list-item-body start-indent="body-start()">
