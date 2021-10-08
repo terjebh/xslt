@@ -13,7 +13,7 @@
     <fo:page-sequence master-reference="content">
 
         <fo:flow flow-name="body">
-            <fo:block span="all" font-size="14pt" font-weight="bold" text-align="center" padding-before="16pt">
+            <fo:block span="all" font-size="14pt" font-weight="bold" text-align="center" padding-before="16pt" padding-after="16pt">
     I. THE RIVER BANK
             </fo:block>
             <fo:block space-before="8pt">
@@ -30,10 +30,10 @@
     spring-cleaning!' and bolted out of the house without even waiting
     to put on his coat...
    </fo:block>
-            <fo:block span="all" font-size="14pt" font-weight="bold" text-align="center" padding-before="16pt">
+            <fo:block span="all" font-size="14pt" font-weight="bold" text-align="center" padding-before="16pt" margin-bottom="16pt">
     II. THE OPEN ROAD
    </fo:block>
-            <fo:block space-before="8pt">
+            <fo:block space-before="14pt">
     'Ratty,' said the Mole suddenly, one bright summer morning, 'if 
     you please, I want to ask you a favour.'
    </fo:block>
