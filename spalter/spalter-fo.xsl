@@ -8,7 +8,7 @@
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="content">
-                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" display-align="justify" />
+                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" display-align="center" />
                     <fo:region-before extent="1cm" background-color="silver" />
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -40,7 +40,6 @@
                                         
                                         <fo:block keep-with-next="always" text-align="justify" margin-bottom="2mm" margin-top="2mm" line-height="10pt" font-size="10pt" font-family="serif" font-weight="bold">
                                             <xsl:value-of select="."></xsl:value-of>
-                                            <xsl:text>:</xsl:text>
                                         </fo:block>
                                         
                                     </xsl:when>
