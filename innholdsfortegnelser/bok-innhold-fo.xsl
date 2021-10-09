@@ -61,6 +61,7 @@
     
     <!-- Mal for innholdet i boken-->
     <xsl:template match="/bok">
+
         <xsl:for-each select="kapittel">
             <fo:block page-break-before="always" font-size="30pt" font-weight="bold" space-before="3cm" text-align="center" id="{generate-id(.)}">
                Kapittel <xsl:value-of select="position()"/>
@@ -69,15 +70,15 @@
                 <xsl:value-of select="tittel"/>
             </fo:block>
             
-
-
             <xsl:for-each select="seksjon">
                 <fo:block page-break-before="always" space-after="1cm" font-size="16pt" font-weight="bold" id="{generate-id(.)}">
                     <xsl:value-of select="tittel"/>
                 </fo:block>
                 <fo:block > <xsl:text>Og her er innholdet</xsl:text></fo:block>
             </xsl:for-each>            
+       
         </xsl:for-each>
+    
     </xsl:template>
     
     
