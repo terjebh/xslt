@@ -8,7 +8,7 @@
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="content">
-                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" />
+                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" display-align="justify" />
                     <fo:region-before extent="1cm" background-color="silver" />
                 </fo:simple-page-master>
             </fo:layout-master-set>
