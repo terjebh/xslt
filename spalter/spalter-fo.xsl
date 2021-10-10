@@ -39,20 +39,20 @@
                             <xsl:choose>
                                 <xsl:when test="@underheading">
                                     
-                                    <fo:block keep-with-next="always" text-align="justify" margin-bottom="2mm" margin-top="2mm" line-height="10pt" font-size="10pt" font-family="serif" font-weight="bold" hyphenate="true" language="nb" country="no">
+                                    <fo:block keep-with-next="always" text-align="justify" margin-bottom="2mm" margin-top="2mm" line-height="10pt" font-size="10pt" font-family="serif" font-weight="bold" hyphenate="true" language="nb" country="no" hyphenation-remain-character-count="4">
                                         <xsl:value-of select="." />
                                     </fo:block>
                                     
                                 </xsl:when>
                                 
                                 <xsl:when test="position()=1">
-                                    <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no">
+                                    <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no" hyphenation-remain-character-count="4">
                                         <xsl:value-of select="." />
                                     </fo:block>
                                 </xsl:when>
                                 
                                 <xsl:when test="position()>1">
-                                    <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no" >
+                                    <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no" hyphenation-remain-character-count="4">
                                         <xsl:value-of select="." />
                                     </fo:block>
                                 </xsl:when>

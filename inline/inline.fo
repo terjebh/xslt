@@ -41,7 +41,15 @@
            Dette er tekst med rett høyre- og venstremarg, men med siste linje høyrejustert.
          Og siste linje er høyrejustert.
          </fo:block>
-
+         <fo:block space-after="0.5cm" background-color="#efefef" linefeed-treatment="preserve">
+            <fo:inline font-weight="bold">&lt;fo:leader>&#xA;</fo:inline>
+            <fo:leader leader-pattern="use-content" leader-length="70%">*</fo:leader>Stjerner
+            <fo:leader leader-pattern="dots" font-size="20pt" leader-length="70%"/>DOTTED
+            <fo:leader leader-pattern="rule" leader-length="70%" rule-style="dashed" rule-thickness="1pt"/>DASHED
+            <fo:leader leader-pattern="space" leader-length="70%" rule-style="double" rule-thickness="1pt"/>space
+            <fo:leader leader-pattern="rule" leader-length="70%" rule-style="ridge" rule-thickness="10pt"/>RIDGE
+            <fo:leader leader-pattern="rule" leader-length="70%" rule-style="groove" rule-thickness="10pt"/>GROOVE
+         </fo:block>
       </fo:flow>
    </fo:page-sequence>
 </fo:root>
