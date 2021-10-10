@@ -16,7 +16,7 @@
             <fo:block span="all" font-size="14pt" font-weight="bold" text-align="center" padding-before="16pt" padding-after="16pt">
     I. THE RIVER BANK
             </fo:block>
-            <fo:block space-before="8pt">
+            <fo:block space-before="8pt"  >
     The Mole had been working very hard all the morning, 
     spring-cleaning his little home. First with brooms, then with 
     dusters; then on ladders and steps and chairs, with a brush and 

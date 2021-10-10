@@ -8,8 +8,8 @@
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="content">
-                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" display-align="center" />
-                    <fo:region-before extent="1cm" background-color="silver" />
+                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" column-gap="4mm"/>
+                    <fo:region-before extent="1cm" background-color="silver" /> 
                 </fo:simple-page-master>
             </fo:layout-master-set>
             
@@ -29,39 +29,37 @@
                     
                     <xsl:for-each select="dokument/kapittel">
                         
-                            <fo:block  text-align="center" font-size="14pt" font-weight="bold" span="all" margin-bottom="0.5cm" margin-top="1cm">
-                                <xsl:number format="1. "></xsl:number>  <xsl:value-of select="heading"></xsl:value-of>
-                            </fo:block>
+                   
+                        <fo:block  text-align="center" font-size="14pt" font-weight="bold" span="all" margin-bottom="0.5cm" margin-top="1cm">
+                            <xsl:number format="1. "></xsl:number>  <xsl:value-of select="heading"></xsl:value-of>
+                        </fo:block>
+                        
+                        <xsl:for-each select="p">
                             
-                            <xsl:for-each select="p">
+                            <xsl:choose>
+                                <xsl:when test="@underheading">
+                                    
+                                    <fo:block keep-with-next="always" text-align="justify" margin-bottom="2mm" margin-top="2mm" line-height="10pt" font-size="10pt" font-family="serif" font-weight="bold" hyphenate="true" language="nb" country="no">
+                                        <xsl:value-of select="." />
+                                    </fo:block>
+                                    
+                                </xsl:when>
                                 
-                                <xsl:choose>
-                                    <xsl:when test="@underheading">
-                                        
-                                        <fo:block keep-with-next="always" text-align="justify" margin-bottom="2mm" margin-top="2mm" line-height="10pt" font-size="10pt" font-family="serif" font-weight="bold">
-                                            <xsl:value-of select="."></xsl:value-of>
-                                        </fo:block>
-                                        
-                                    </xsl:when>
-                                    
-                                    <xsl:when test="position()=1">
-                                        <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
-                                            <xsl:value-of select="."></xsl:value-of>
-                                            <xsl:text>:</xsl:text>
-                                        </fo:block>
-                                    </xsl:when>
-                                    
-                                    <xsl:when test="position()>1">
-                                        <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif">
-                                            <xsl:value-of select="."></xsl:value-of>
-                                        </fo:block>
-                                    </xsl:when>
-                                    
-                                </xsl:choose>
-                           
+                                <xsl:when test="position()=1">
+                                    <fo:block text-align="justify" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no">
+                                        <xsl:value-of select="." />
+                                    </fo:block>
+                                </xsl:when>
+                                
+                                <xsl:when test="position()>1">
+                                    <fo:block text-align="justify" text-indent="0.5cm" margin-bottom="1mm" line-height="10pt" font-size="10pt" font-family="serif" hyphenate="true" language="nb" country="no" >
+                                        <xsl:value-of select="." />
+                                    </fo:block>
+                                </xsl:when>
+                                
+                            </xsl:choose>
                             
                         </xsl:for-each>
-                          
                     </xsl:for-each>
                     
                     
