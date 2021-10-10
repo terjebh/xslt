@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="content">
+         <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" />
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:page-sequence master-reference="content">
+    
+      <fo:flow flow-name="body">
+         <fo:block space-after="0.5cm" background-color="#efefef">
+            Tekst som er med <fo:inline font-weight="bold">fete typer</fo:inline>,
+            <fo:inline font-style="italic">kursiv</fo:inline> og
+            <fo:inline text-decoration="underline">understreket</fo:inline>
+           </fo:block>
+         <fo:block letter-spacing="3mm" space-after="0.5cm" background-color="#efefef">
+          Stor avstand mellom bokstavene
+         </fo:block>
+         <fo:block word-spacing="15mm" space-after="0.5cm" background-color="#efefef">
+          Stor avstand mellom ordene
+         </fo:block>
+         <fo:block text-transform="uppercase" space-after="0.5cm" background-color="#efefef">
+          Tekst omgjort til store bokstaver
+         </fo:block>
+         <fo:block space-after="0.5cm" background-color="#efefef">
+         Følgende ord er 30% høyere enn grunnlinjen: <fo:inline baseline-shift="30%">høyt</fo:inline>, 
+         og dette ordet er 30% lavere enn grunnlinjen: <fo:inline baseline-shift="-30%">lavt.</fo:inline>
+         </fo:block>
+         <fo:block text-align="left" space-after="0.5cm" background-color="#efefef">
+            Venstrejustert tekst
+         </fo:block>
+         <fo:block text-align="right" space-after="0.5cm" background-color="#efefef">
+           Høyrejustert tekst
+         </fo:block>
+         <fo:block text-align="center" space-after="0.5cm" background-color="#efefef">
+            Sentrert tekst.
+         </fo:block>
+         <fo:block text-align="justify" text-align-last="right" space-after="0.5cm" background-color="#efefef"> 
+           Dette er tekst med rett høyre- og venstremarg, men med siste linje høyrejustert.
+           Dette er tekst med rett høyre- og venstremarg, men med siste linje høyrejustert.
+           Dette er tekst med rett høyre- og venstremarg, men med siste linje høyrejustert.
+         Og siste linje er høyrejustert.
+         </fo:block>
+
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>
