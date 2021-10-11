@@ -26,14 +26,14 @@
                 </fo:simple-page-master>
                 
                 <fo:simple-page-master master-name="spalter">
-                    <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="4" column-gap="2.5mm"/>
+                    <fo:region-body margin="3cm,3cm,3cm,3cm" column-count="4" column-gap="2.5mm"/>
                     <fo:region-before extent="1cm" background-color="silver" /> 
                 </fo:simple-page-master>
                 
                 
                 <fo:simple-page-master master-name="right" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
                     <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
-                    <fo:region-before region-name="right-hode" extent="0mm" display-align="after" />
+                    <fo:region-before  extent="0mm" display-align="after" />
                     <fo:region-after extent="0cm" />
                     <fo:region-start extent="0cm" />
                     <fo:region-end extent="0cm" />
@@ -41,21 +41,22 @@
                 
                 <fo:simple-page-master master-name="left" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
                     <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
-                    <fo:region-before region-name="left-hode" extent="0mm" display-align="after" />
+                    <fo:region-before extent="0mm" display-align="after" />
                     <fo:region-after extent="0cm" />
                     <fo:region-start extent="0cm" />
                     <fo:region-end extent="0cm" />
                 </fo:simple-page-master>
                 
                 <fo:page-sequence-master master-name="layout">
-                    <fo:conditional-page-master-reference master-reference="cover"  />
+                    
                     <fo:repeatable-page-master-alternatives>
+                        <fo:conditional-page-master-reference master-reference="cover"  />
                         <fo:conditional-page-master-reference master-reference="tittelside" page-position="first" />
                         <fo:conditional-page-master-reference master-reference="left" odd-or-even="even" />
                         <fo:conditional-page-master-reference master-reference="right" odd-or-even="odd" />
-                        <fo:conditional-page-master-reference master-reference="slutt" page-position="last" />
+                        <fo:conditional-page-master-reference master-reference="spalter" page-position="last" />
                     </fo:repeatable-page-master-alternatives>
-                    <fo:conditional-page-master-reference master-reference="spalter" page-position="last" />
+                    
                 </fo:page-sequence-master>
             </fo:layout-master-set>
             
@@ -135,8 +136,8 @@
                     <fo:block span="all"></fo:block>
                 </fo:flow>
             </fo:page-sequence>
-        
-        
+            
+            
             <fo:page-sequence master-reference="left">
                 
                 <fo:static-content flow-name="xsl-region-before">
@@ -189,8 +190,8 @@
                     <fo:block span="all"></fo:block>
                 </fo:flow>
             </fo:page-sequence>
-        
-        
+            
+            
             <fo:page-sequence master-reference="right">
                 
                 <fo:static-content flow-name="xsl-region-before">
@@ -243,8 +244,8 @@
                     <fo:block span="all"></fo:block>
                 </fo:flow>
             </fo:page-sequence>
-        
-        <fo:page-sequence master-reference="spalter">
+            
+            <fo:page-sequence master-reference="spalter">
                 
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
@@ -296,9 +297,9 @@
                     <fo:block span="all"></fo:block>
                 </fo:flow>
             </fo:page-sequence>
-        
-        
-        
+            
+            
+            
         </fo:root>
     </xsl:template>
 </xsl:stylesheet>
