@@ -17,21 +17,16 @@
                     <fo:region-end extent="2cm" />
                 </fo:simple-page-master>
                 
-                <fo:simple-page-master master-name="tittelside" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="1cm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
-                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="0cm" column-count="2" column-gap="6.35mm" />
+                <fo:simple-page-master master-name="side1" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="1cm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="0cm" column-count="1" column-gap="6.35mm" />
                     <fo:region-before extent="2cm" />
                     <fo:region-after extent="2cm" />
                     <fo:region-start extent="2cm" />
                     <fo:region-end extent="2cm" />
                 </fo:simple-page-master>
                 
-                <fo:simple-page-master master-name="spalter">
-                    <fo:region-body margin="3cm,3cm,3cm,3cm" column-count="4" column-gap="2.5mm"/>
-                    <fo:region-before extent="1cm" background-color="silver" /> 
-                </fo:simple-page-master>
-                
-                
-                <fo:simple-page-master master-name="right" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                               
+                <fo:simple-page-master master-name="side2" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
                     <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
                     <fo:region-before  extent="0mm" display-align="after" />
                     <fo:region-after extent="0cm" />
@@ -39,22 +34,28 @@
                     <fo:region-end extent="0cm" />
                 </fo:simple-page-master>
                 
-                <fo:simple-page-master master-name="left" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
-                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="2" column-gap="6.35mm" />
+                <fo:simple-page-master master-name="side3" page-height="29.7cm" page-width="21.0cm" margin-top="11mm" margin-bottom="21.4mm" margin-left="20.5mm" margin-right="20.5mm">
+                    <fo:region-body margin="0cm" margin-right="0cm" margin-left="0cm" margin-top="27mm" column-count="3" column-gap="6.35mm" />
                     <fo:region-before extent="0mm" display-align="after" />
                     <fo:region-after extent="0cm" />
                     <fo:region-start extent="0cm" />
                     <fo:region-end extent="0cm" />
                 </fo:simple-page-master>
+
+                <fo:simple-page-master master-name="side4">
+                    <fo:region-body margin="3cm,3cm,3cm,3cm" column-count="4" column-gap="2.5mm"/>
+                    <fo:region-before extent="1cm" background-color="silver" /> 
+                </fo:simple-page-master>
                 
+
                 <fo:page-sequence-master master-name="layout">
                     
                     <fo:repeatable-page-master-alternatives>
                         <fo:conditional-page-master-reference master-reference="cover"  />
-                        <fo:conditional-page-master-reference master-reference="tittelside" page-position="first" />
-                        <fo:conditional-page-master-reference master-reference="left" odd-or-even="even" />
-                        <fo:conditional-page-master-reference master-reference="right" odd-or-even="odd" />
-                        <fo:conditional-page-master-reference master-reference="spalter" page-position="last" />
+                        <fo:conditional-page-master-reference master-reference="side1" page-position="first" />
+                        <fo:conditional-page-master-reference master-reference="side2" odd-or-even="even" />
+                        <fo:conditional-page-master-reference master-reference="side3" odd-or-even="odd" />
+                        <fo:conditional-page-master-reference master-reference="side4" page-position="last" />
                     </fo:repeatable-page-master-alternatives>
                     
                 </fo:page-sequence-master>
@@ -84,7 +85,7 @@
                 </fo:flow>
             </fo:page-sequence>
             
-            <fo:page-sequence master-reference="tittelside">
+            <fo:page-sequence master-reference="side1">
                 
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
@@ -138,7 +139,7 @@
             </fo:page-sequence>
             
             
-            <fo:page-sequence master-reference="left">
+            <fo:page-sequence master-reference="side2">
                 
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
@@ -192,7 +193,7 @@
             </fo:page-sequence>
             
             
-            <fo:page-sequence master-reference="right">
+            <fo:page-sequence master-reference="side3">
                 
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
@@ -245,7 +246,7 @@
                 </fo:flow>
             </fo:page-sequence>
             
-            <fo:page-sequence master-reference="spalter">
+            <fo:page-sequence master-reference="side4">
                 
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
