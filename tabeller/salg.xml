@@ -8,7 +8,7 @@
 		<epost>donald@disney.com</epost>
 		<fødselsdato>1924-01-23</fødselsdato>
 		<salg type="Programmering">4000</salg>
-		<salg type="Rådgivning"> 550</salg>
+		<salg type="Rådgivning">550</salg>
 		<salg type="Programmering">7600</salg>
 	</person>
 	<person id="2" kjønn="K">
@@ -40,7 +40,7 @@
 		<salg type="Design">4200</salg>
 	</person>
 	<person id="5" kjønn="M">
-		<fornavn>Mikke</fornavn>
+		<fornavn>Mikke dette er en lang linje som vil brekkes?</fornavn>
 		<etternavn>Mus</etternavn>
 		<epost>mikke@disney.com</epost>
 		<fødselsdato>1925-05-12</fødselsdato>

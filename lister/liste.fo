@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="side" margin="0.5cm">
+            <fo:region-body margin="2cm"/>
+            <fo:region-before extent="1cm" background-color="silver" margin="0.5cm"/>
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="side">
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block text-align="right" margin-right="0.5cm" margin-top="0.5cm">
+                Side
+                <fo:page-number/>
+            </fo:block>
+        </fo:static-content>
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block text-align="center" font-size="14pt" border-bottom="solid 1px black" space-after="1cm">Lister</fo:block>
+            <fo:block>
+                Nummerering:
+                1
+            </fo:block>
+            <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="100mm" space-after="1cm">
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>1</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt en</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>2</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt to</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>3</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt tre</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>4</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt fire</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+            </fo:list-block>
+            <fo:block>
+                Nummerering:
+                a)
+            </fo:block>
+            <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="100mm" space-after="1cm">
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>a)</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt en</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>b)</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt to</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>c)</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt tre</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>d)</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt fire</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+            </fo:list-block>
+            <fo:block>
+                Nummerering:
+                A.
+            </fo:block>
+            <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="100mm" space-after="1cm">
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>A.</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt en</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>B.</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt to</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>C.</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt tre</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>D.</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt fire</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+            </fo:list-block>
+            <fo:block>
+                Nummerering:
+                I
+            </fo:block>
+            <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="100mm" space-after="1cm">
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>I</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt en</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>II</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt to</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>III</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt tre</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>IV</fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt fire</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+            </fo:list-block>
+            <fo:block>
+                Nummerering:
+                *
+            </fo:block>
+            <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="100mm" space-after="1cm">
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>
+                            *
+                        </fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt en</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>
+                            *
+                        </fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt to</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>
+                            *
+                        </fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt tre</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                    <fo:list-item-label start-indent="5mm" end-indent="label-end()">
+                        <fo:block>
+                            *
+                        </fo:block>
+                    </fo:list-item-label>
+                    <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Listepunkt fire</fo:block>
+                    </fo:list-item-body>
+                </fo:list-item>
+            </fo:list-block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>

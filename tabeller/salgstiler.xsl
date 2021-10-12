@@ -90,6 +90,7 @@
         <xsl:attribute name="padding-end">2pt</xsl:attribute>
         <xsl:attribute name="padding-before">2pt</xsl:attribute>
         <xsl:attribute name="padding-after">2pt</xsl:attribute>
+        <xsl:attribute name="display-align">center</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="table.data.td">

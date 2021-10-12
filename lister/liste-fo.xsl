@@ -61,7 +61,7 @@
       Nummerering:
       <xsl:value-of select="$nummer"></xsl:value-of>
     </fo:block>
-    <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="50mm" space-after="1cm">
+    <fo:list-block provisional-distance-between-starts="10mm" provisional-label-separation="10mm" space-after="1cm">
       <xsl:for-each select="item">
         <fo:list-item>
           <fo:list-item-label start-indent="5mm" end-indent="label-end()">

@@ -9,8 +9,8 @@
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="content">
                     <fo:region-body region-name="body" margin="3cm,3cm,3cm,3cm" column-count="2" />
-                    <fo:region-before extent="2cm" background-color="yellow" />
-                    <fo:region-after extent="2cm" background-color="green" />
+                    <fo:region-before extent="2cm" background-color="yellow"  />
+                    <fo:region-after extent="2cm" background-color="green"  />
                     <fo:region-start extent="2cm" background-color="silver" />
                     <fo:region-end extent="2cm" background-color="red" />
                 </fo:simple-page-master>

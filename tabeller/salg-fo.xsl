@@ -144,8 +144,8 @@
                         </xsl:choose>
                     </xsl:variable>
 
-                    <fo:table-row background-color="{$bgclr}">
-
+                    <fo:table-row background-color="{$bgclr}" display-align="center">
+ 
                         <fo:table-cell xsl:use-attribute-sets="table.data.td">
                             <fo:block text-align="center">
                                 <xsl:value-of select="@id" />
