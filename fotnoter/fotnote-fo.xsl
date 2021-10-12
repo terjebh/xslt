@@ -3,6 +3,21 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version='1.0'>
     
+  <xsl:output method="xml" />
+    
+    <xsl:template match="/">
+        
+        <fo:root>
+            <fo:layout-master-set>
+                      
+                <fo:simple-page-master master-name="cover" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="5.5cm" margin-bottom="1cm" margin-left="2cm" margin-right="1cm">
+                    <fo:region-body margin="2cm" />
+                    <fo:region-before extent="2cm" />
+                    <fo:region-after extent="2cm" />
+                    <fo:region-start extent="2cm" />
+                    <fo:region-end extent="2cm" />
+                </fo:simple-page-master>  
+        </fo:layout-master-set>
     <xsl:template match="p">
         <fo:block>
             <xsl:apply-templates/>
@@ -35,5 +50,5 @@
             </fo:footnote-body>
         </fo:footnote>
     </xsl:template>
-    
+    </fo:root>
 </xsl:stylesheet>
