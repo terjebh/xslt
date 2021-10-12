@@ -7,9 +7,8 @@
         
         <fo:root>
             <fo:layout-master-set>
-                
-                
-                <fo:simple-page-master master-name="cover" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="5.5cm" margin-bottom="1cm" margin-left="1cm" margin-right="1cm">
+                      
+                <fo:simple-page-master master-name="cover" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="5.5cm" margin-bottom="1cm" margin-left="2cm" margin-right="1cm">
                     <fo:region-body margin="2cm" />
                     <fo:region-before extent="2cm" />
                     <fo:region-after extent="2cm" />
@@ -47,20 +46,10 @@
                     <fo:region-before extent="1cm" background-color="silver" /> 
                 </fo:simple-page-master>
                 
-
-                <fo:page-sequence-master master-name="layout">
-                    
-                    <fo:repeatable-page-master-alternatives>
-                        <fo:conditional-page-master-reference master-reference="cover"  />
-                        <fo:conditional-page-master-reference master-reference="side1" page-position="first" />
-                        <fo:conditional-page-master-reference master-reference="side2" odd-or-even="even" />
-                        <fo:conditional-page-master-reference master-reference="side3" odd-or-even="odd" />
-                        <fo:conditional-page-master-reference master-reference="side4" page-position="last" />
-                    </fo:repeatable-page-master-alternatives>
-                    
-                </fo:page-sequence-master>
+                
             </fo:layout-master-set>
-            
+
+            <!-- her er det definert en page-sequence for hver side, sidne vi ikke har en page-sequence-master -->
             
             <fo:page-sequence master-reference="cover">
                 
@@ -72,13 +61,13 @@
                 
                 <fo:flow flow-name="xsl-region-body">
                     
-                    <fo:block text-align="center" font-size="15pt" font-weight="bold" margin-bottom="0.5cm" span="all">
+                    <fo:block text-align="left" font-size="15pt" font-weight="bold" margin-bottom="0.5cm" span="all">
                         <xsl:value-of select="/dokument/tittel"></xsl:value-of>
                     </fo:block>
                     
                     <xsl:for-each select="dokument/kapittel">
                         
-                        <fo:block  text-align="center" font-size="14pt" font-weight="bold" span="all" margin-bottom="0.5cm" margin-top="1cm">
+                        <fo:block  text-align="left" font-size="14pt" font-weight="bold" span="all" margin-bottom="0.5cm" margin-top="1cm">
                             <xsl:number format="1. "></xsl:number>  <xsl:value-of select="heading"></xsl:value-of>
                         </fo:block>
                     </xsl:for-each>
