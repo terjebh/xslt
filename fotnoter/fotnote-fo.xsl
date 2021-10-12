@@ -5,7 +5,7 @@
     
   <xsl:output method="xml" />
     
-    <xsl:template match="/">
+    <xsl:template match="/p">
         
         <fo:root>
             <fo:layout-master-set>
@@ -18,11 +18,25 @@
                     <fo:region-end extent="2cm" />
                 </fo:simple-page-master>  
         </fo:layout-master-set>
-    <xsl:template match="p">
+</fo:root>
+
+  <fo:page-sequence master-reference="cover">
+                
+                <fo:static-content flow-name="xsl-region-before">
+                    <fo:block text-align="right" span="all" margin-top="5mm" margin-right="5mm">
+                        Side  <fo:page-number />
+                    </fo:block>
+                </fo:static-content>
         <fo:block>
             <xsl:apply-templates/>
         </fo:block>
-    </xsl:template>
+           
+                <fo:flow flow-name="xsl-region-body">
+                    
+          </fo:flow>
+    </fo:page-sequence>      
+</xsl:template>    
+    
     
     <xsl:template match="fn">
         <fo:footnote>
@@ -50,5 +64,7 @@
             </fo:footnote-body>
         </fo:footnote>
     </xsl:template>
-    </fo:root>
+    
+    
+    
 </xsl:stylesheet>
