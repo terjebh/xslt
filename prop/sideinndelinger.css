@@ -1,3 +1,5 @@
+@page {
+
 @top-left-corner {
     content: "@top-left-corner";
     border: 1px solid red;
@@ -96,4 +98,10 @@
     border: 1px solid red;
     color: black;
     font-size: x-small;
+}
+
+}
+
+h1, h2, p {
+    text-align:center;
 }

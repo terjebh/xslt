@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="content" margin="0.5in">
+            <fo:region-body region-name="body" margin="0.5in" background-color="#efefef"/>
+            <fo:region-before extent="1cm" />
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+
+
+    <fo:page-sequence master-reference="content">
+
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block text-align-last="justify">
+                Tekst til venstre
+                <fo:leader leader-pattern="space" />
+                Tekst til høyre
+            </fo:block>
+        </fo:static-content>
+
+        <fo:flow flow-name="body">
+            <fo:block font-size="18pt" margin="1cm" text-align="center">Ulikt justert tekst på samme linje</fo:block>
+
+
+            <fo:block text-align-last="justify">
+                Tekst til venstre
+                <fo:leader leader-pattern="space" />
+                Tekst i midten
+                <fo:leader leader-pattern="space" />
+                Tekst til høyre
+            </fo:block>
+
+
+            <fo:block text-align="center" margin="1cm">
+                Bilder spredt jevnt utover siden
+            </fo:block>
+
+            <fo:block text-align-last="justify">
+                <fo:external-graphic src="logo.png" content-width="3cm" />
+                <fo:leader leader-pattern="space" />
+                <fo:external-graphic src="logo.png" content-width="3cm" />
+                <fo:leader leader-pattern="space" />
+                <fo:external-graphic src="logo.png" content-width="3cm" />
+                <fo:leader leader-pattern="space" />
+                <fo:external-graphic src="logo.png" content-width="3cm" />
+            </fo:block>
+
+
+            <fo:block margin="1cm">
+
+
+
+            </fo:block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>

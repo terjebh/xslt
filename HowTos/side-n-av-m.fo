@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="content" margin="0.5in">
+            <fo:region-body region-name="body" margin="0.5in" background-color="#efefef"/>
+            <fo:region-before extent="1cm" />
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+
+
+    <fo:page-sequence master-reference="content" initial-page-number="42">
+
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block text-align-last="right">
+           Side <fo:page-number /> av  <fo:page-number-citation ref-id="slutten" />
+            </fo:block>
+        </fo:static-content>
+
+        <fo:flow flow-name="body">
+            <fo:block font-size="18pt" margin="1cm" text-align="center">Side n av m</fo:block>
+
+
+
+            
+
+            <fo:block margin="1cm" page-break-before="always">
+                Ny side
+            </fo:block>
+            <fo:block margin="1cm" page-break-before="always">
+                Ny side
+            </fo:block>
+            <fo:block margin="1cm" page-break-before="always">
+                Ny side
+            </fo:block>
+            <fo:block margin="1cm" page-break-before="always">
+                Ny side
+            </fo:block>
+            <fo:block id="slutten" margin="1cm" page-break-before="always">
+                Ny side
+            </fo:block>
+
+            
+
+
+
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
