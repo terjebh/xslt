@@ -15,8 +15,7 @@
 
                 <fo:float float="left">
                     <fo:block padding-right="0.5cm">
-                   
-                   <fo:external-graphic src="logo.png" content-width="3cm"  />
+                       <fo:external-graphic src="logo.png" content-width="3cm"  />
                     </fo:block>
                 </fo:float>
 
@@ -28,8 +27,30 @@
 
                 Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke. Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
                              
+                Dette er en enkel, liten tekst som skal flyte til høyre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
 
+                Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke. Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+                
+                <fo:float float="left">
+                    <fo:block padding-right="0.5cm" padding-top="0.2cm">
+                       <fo:external-graphic src="logo.png" content-width="3cm"  />
+                    </fo:block>
+                </fo:float>
 
+                Dette er en enkel, liten tekst som skal flyte til høyre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+
+                Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke. Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+                Dette er en enkel, liten tekst som skal flyte til høyre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+
+            
+                <fo:float float="right">
+                    <fo:block padding-left="0.5cm" padding-top="0.2cm" margin-right="0mm" padding-right="0mm" > 
+                       <fo:external-graphic src="logo.png" content-width="3cm"  />
+                    </fo:block>
+                </fo:float>
+                Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke. Og dette er en enkel, liten tekst som skal flyte til venstre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+                Dette er en enkel, liten tekst som skal flyte til høyre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
+                Dette er en enkel, liten tekst som skal flyte til høyre for et svg-bilde. Det blir spennende å se om den faktisk gjør det eller ikke.
 
             </fo:block>
         </fo:flow>
