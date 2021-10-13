@@ -1,0 +1,190 @@
+@page {
+  size: 110mm 170mm;
+  bleed:5mm;
+  @top-left-corner {
+    content: "@top-left-corner";
+    border: 1px solid red;
+    color: black;
+}
+@top-left {
+    content: "@top-left";
+    border: 1px solid red;
+    color: black;
+}
+@top-center {
+    content: "@top-center";
+    border: 1px solid red;
+    color: black;
+}
+@top-right {
+    content: "@top-right";
+    border: 1px solid red;
+    color: black;
+}
+@top-right-corner {
+    content: "@top-rightcorner";
+    border: 1px solid red;
+    color: black;
+}
+
+@bottom-left-corner {
+    content: "@bottom-left-corner";
+    border: 1px solid red;
+    color: black;
+}
+@bottom-left {
+    content: "@bottom-left";
+    border: 1px solid red;
+    color: black;
+}
+@bottom-center {
+    content: "@bottom-center";
+    border: 1px solid red;
+    color: black;
+}
+@bottom-right {
+    content: "@bottom-right";
+    border: 1px solid red;
+    color: black;
+}
+@bottom-right-corner {
+    content: "@bottom-rightcorner";
+    border: 1px solid red;
+    color: black;
+}
+
+@left-top {
+    content: "@left-top";
+    border: 1px solid red;
+    color: black;
+}
+@left-middle {
+    content: "@left-middle";
+    border: 1px solid red;
+    color: black;
+}
+@left-bottom {
+    content: "@left-bottom";
+    border: 1px solid red;
+    color: black;
+}
+
+@right-top {
+    content: "@right-top";
+    border: 1px solid red;
+    color: black;
+}
+@right-middle {
+    content: "@right-middle";
+    border: 1px solid red;
+    color: black;
+}
+@right-bottom {
+    content: "@right-bottom";
+    border: 1px solid red;
+    color: black;
+}
+
+  }
+@page :left {
+  margin: 20mm 10mm 12mm 15mm;
+  @top-left { content: counter(page) }
+  @top-right { content: string(heading); font-variant: small-caps }
+}
+@page :right {
+  margin: 20mm 15mm 12mm 10mm;
+  @top-left { content: string(heading); font-variant: small-caps }
+  @top-right { content: counter(page) }
+}
+@page :blank {
+  @top-right { content: none }
+  @top-left { content: none }
+} 
+@page clean {
+  @top-right { content: none }
+  @top-left { content: none }
+}
+
+img {
+  display: none;
+}
+
+html {
+  font-family: Source Serif Pro;
+  font-size: 10pt;
+}
+body {
+  margin: 0;
+}
+section {
+  break-after: right;
+  padding-top: 25mm;
+}
+aside {
+  display: none;
+}
+
+h1 {
+  break-after: right;
+  font-size: 2.6em;
+  font-weight: normal;
+  margin: 3em 0;
+  page: clean;
+}
+h2 {
+  font-size: 1em;
+  font-variant: small-caps;
+  font-weight: normal;
+  margin: 0 0 2em;
+  page: clean;
+  string-set: heading content();
+  text-align: center;
+}
+p {
+  hyphens: auto;
+  margin: 0;
+  text-align: justify;
+  text-indent: 1em;
+}
+dd {
+  margin: 0 0 0 1em;
+}
+br::after {
+  content: '';
+  display: inline-block;
+  width: 0.78em;
+}
+
+#authors {
+  page: clean;
+}
+#authors p {
+  text-indent: 0;
+}
+
+#contents {
+  page: clean;
+}
+#contents p {
+  margin: 2em 0;
+  text-indent: 0;
+}
+#contents ul {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+}
+#contents li {
+  display: block;
+}
+#contents a {
+  color: inherit;
+  text-decoration: none;
+}
+#contents a::before {
+  content: target-text(attr(href)) ' ' leader('.') ' ' target-counter(attr(href), page);
+}
+
+.fullpage {
+  display: none;
+}

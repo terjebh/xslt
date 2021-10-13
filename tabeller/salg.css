@@ -1,10 +1,49 @@
+@page {
+    size: 21.0cm 29.7cm;
+    @top-center {
+        content: "css3 som pdf";
+    }
+}
+
+@page :left {
+    margin: 20mm 10mm 12mm 15mm;
+    @top-left {
+        content: "Side " counter(page)
+    }
+    @top-right {
+        content: "Venstreside";
+        font-variant: small-caps
+    }
+}
+
+@page :right {
+    margin: 20mm 15mm 12mm 10mm;
+    @top-left {
+        content: "Høyreside";
+        font-variant: small-caps
+    }
+    @top-right {
+        content: "Side " counter(page)
+    }
+}
+
+
+@page :blank {
+    @top-right {
+        content: none
+    }
+    @top-left {
+        content: none
+    }
+}
+
 body {
     background-color: #eee;
     padding: 10px;
 }
 
 h1 {
-    width: 900px;
+    width: 100%;
     padding: 15px;
     margin: auto;
     border: solid 2px black;
@@ -12,36 +51,67 @@ h1 {
     background-color: #05387b;
     font-family: arial;
     box-shadow: 5px 10px 10px #888;
-    font-size: 26px;
+    font-size: 20px;
     color: #fff;
     text-align: center;
+    margin-top: 10px;
     /* background-image: url("https://itfakultetet.no/sparebank-1-forsikring.jpg");
 background-repeat: no-repeat;
 background-position: right; */
+page-break-before: always;
 }
 
 h2 {
-    width: 900px;
+    width: 100%;
     text-align: center;
     padding: 3px;
-    background-color: #444;
-    color: #fff;
     margin-left: auto;
     margin-right: auto;
     font-family: arial;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 16px;
+    background-color: #444;
+    color: #fff;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.underheading {
+    font-weight: bold;
+    text-align: left;
+}
+
+section {
+    columns: 2;
+    text-align: justify;
+    text-align-last: left;
+    margin-bottom: 50px;
+}
+
+section:last-of-type {
+    columns: 3;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.break{
+    page-break-after: always;
+    break-after: always;
 }
 
 .standard_tabell {
-    width: 900px;
+    width: 100%;
     padding: 15px;
     margin: auto;
     border: solid 2px black;
     border-radius: 10px;
     background-color: rgb(117, 176, 248);
     font-family: arial;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     color: #000;
     box-shadow: 5px 10px 10px #888;
