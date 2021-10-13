@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-Some Pod Duang were restruck<fo:footnote xmlns:fo="http://www.w3.org/1999/XSL/Format">
-  <fo:inline font-size="0.83em" baseline-shift="super">1)</fo:inline>
-  <fo:footnote-body>
-    <fo:list-block provisional-distance-between-starts="20pt" provisional-label-separation="5pt">
-      <fo:list-item>
-        <fo:list-item-label end-indent="label-end()">
-          <fo:block font-size="0.83em" line-height="0.9em">1)</fo:block>
-        </fo:list-item-label>
-        <fo:list-item-body start-indent="body-start()">
-          <fo:block font-size="0.83em" line-height="0.9em">Berglund, A., Thai Money, from
-  Earliest Times to King Rama V, p. 203.</fo:block>
-        </fo:list-item-body>
-      </fo:list-item>
-    </fo:list-block>
-  </fo:footnote-body>
-</fo:footnote> during the reign of King Rama V.
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="content" margin="0.5in">
+      <fo:region-body region-name="body" margin="0.5in" background-color="#efefef"/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+
+
+  <fo:page-sequence master-reference="content">
+
+    <fo:flow flow-name="body">
+      <fo:block font-size="18pt" margin="1cm">Fotnoter</fo:block>
+      <fo:block margin="1cm">
+        Some Pod Duang were restruck
+        <fo:footnote>
+          <fo:inline font-size="0.6em" baseline-shift="super">1)</fo:inline>
+          <fo:footnote-body>
+            <fo:list-block provisional-distance-between-starts="20pt" provisional-label-separation="5pt">
+              <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                  <fo:block font-size="0.75em" line-height="1em">1)</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                  <fo:block font-size="0.75em" line-height="1em">Berglund, A., Thai Money, from Earliest Times to King Rama V, p. 203.</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:footnote-body>
+        </fo:footnote>
+        during the reign of King Rama V. Og hvis man skal lage en  fotnote til, for eksempel her  
+        <fo:footnote>
+          <fo:inline font-size="0.6em" baseline-shift="super">2)</fo:inline>
+          <fo:footnote-body>
+            <fo:list-block provisional-distance-between-starts="20pt" provisional-label-separation="5pt">
+              <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                  <fo:block font-size="0.75em" line-height="1em">2)</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                  <fo:block font-size="0.75em" line-height="1em">Terje Berg-Hansen, Oktober 2021, Cyberspace</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:footnote-body>
+        </fo:footnote>
+       , så lager man et tilsvarende objekt der hvor fotnoten skal settes inn. 
+      </fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

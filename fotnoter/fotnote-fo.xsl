@@ -8,7 +8,7 @@
     <xsl:template match="/p">
         
         <fo:root>
-            <fo:layout-master-set>
+            <fo:layout-master-set> 
                       
                 <fo:simple-page-master master-name="cover" page-height="29.7cm" page-width="21.0cm" margin="2cm" margin-top="5.5cm" margin-bottom="1cm" margin-left="2cm" margin-right="1cm">
                     <fo:region-body margin="2cm" />
