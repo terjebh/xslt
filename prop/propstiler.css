@@ -105,6 +105,8 @@ p {
 .K-DEL-INNLDEL {
     width: 100%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .K-TIT-HTIT {
@@ -118,17 +120,25 @@ p {
     font-size: 13pt;
     border-bottom: solid 1px #000;
     text-align: left;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;;
 }
 
 .K-DEL-HOVEDDEL {
     columns: 2;
+    margin: top 0px;
+    padding-top: 0px;
 }
 
 p.K-TILRADNING {
+    width: 100%;
     font-style: italic;
     font-size: 10pt;
     text-align: center;
     white-space: pre-line;
+    padding-left: 23%;
 }
 
 .K-TIT-TILRSTAD {
@@ -162,6 +172,15 @@ p.K-TILRADNING {
     padding-left: 40%;
 }
 
+h2.K-TIT-VEDTAKDEL {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+
 .K-PDFLINK {
     visibility: hidden;
 }
@@ -185,7 +204,14 @@ p.K-TILRADNING {
 }
 
 .K-DEL-VEDTAKDELER {
+    padding-top: 0px;
     columns: 2;
+    margin-top: 0px;
+    
+}
+
+.K-DEL-VEDTAKDEL {
+    break-inside: avoid-column;
 }
 
 .K-DEL-TILRSTAD {
@@ -225,6 +251,9 @@ h3 {
 p {
     text-align: justify;
     text-align-last: left;
+    padding: 1px;
+    margin-bottom: 3px;
+    margin-top:1px;
 }
 
 .break {
