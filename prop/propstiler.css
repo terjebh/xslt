@@ -118,13 +118,13 @@ p {
     font-weight: normal;
     font-family: 'Times New Roman', Times, serif;
     font-size: 13pt;
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #000000;
     text-align: left;
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 2px;
-    margin-bottom: 2px;
-    ;
+    margin-bottom: 2px
+    
 }
 
 .K-DEL-HOVEDDEL {
@@ -209,7 +209,7 @@ h2.K-TIT-VEDTAKDEL {
 }
 
 .K-DEL-VEDTAKDEL {
-    break-inside: avoid-column;
+   break-inside: avoid-column;
 }
 
 .K-DEL-TILRSTAD {

@@ -18,10 +18,7 @@
 
         <fo:flow flow-name="body">
             <fo:block font-size="18pt" margin="1cm" text-align="center">Side n av m</fo:block>
-
-
-
-            
+           
 
             <fo:block margin="1cm" page-break-before="always">
                 Ny side
@@ -40,9 +37,6 @@
             </fo:block>
 
             
-
-
-
         </fo:flow>
     </fo:page-sequence>
 </fo:root>

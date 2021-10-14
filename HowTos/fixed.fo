@@ -13,12 +13,13 @@
             <fo:block font-size="18pt" margin="1cm">Absolute Position = fixed</fo:block>
             <fo:block margin="1cm">
 
-                <fo:block-container absolute-position="fixed" top="1cm" left="15.5cm">
+            <fo:float float="left">    
+            <fo:block-container absolute-position="fixed" top="5cm" left="12.5cm">
                     <fo:block padding-right="0.5cm">
                        <fo:external-graphic src="logo.png" content-width="3cm"  />
                     </fo:block>
                 </fo:block-container>
-
+            </fo:float>
                 The Boolean trait is-reference-area determines whether or not an area establishes a coordinate system for specifying indents. An area for which this trait is true is called a reference-area. Only a reference-area may have a block-progression-direction which is different from that of its parent. A reference-area may be either a block-area or an inline-area. Only specific formatting objects generate reference areas.
 
                 The Boolean trait is-viewport-area determines whether or not an area establishes an opening through which its descendant areas can be viewed, and can be used to present clipped or scrolled material; for example, in printing applications where bleed and trim is desired. An area for which this trait is true is called a viewport-area. A viewport-area also has the value true for the is-reference-area trait.
