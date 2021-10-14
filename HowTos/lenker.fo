@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <fo:layout-master-set>
+        <fo:simple-page-master margin-right="20mm" margin-left="20mm" margin-bottom="10mm" margin-top="10mm" page-width="300mm" page-height="400mm" master-name="page">
+            <fo:region-body margin-right="0mm" margin-left="0mm" margin-bottom="10mm" margin-top="0mm"/>
+            <fo:region-after extent="10mm"/>
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="page">
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block space-after="12pt" font-weight="bold" font-size="36pt" text-align="center">Using Links</fo:block>
+            <fo:block font-size="24pt">
+                Her er en lenke til ITfakultetets webside: 
+                <fo:basic-link external-destination="https://web.itfakultetet.no">
+                    <fo:inline text-decoration="underline">ITfakultetet.no</fo:inline>
+                </fo:basic-link>
+                .
+            </fo:block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
