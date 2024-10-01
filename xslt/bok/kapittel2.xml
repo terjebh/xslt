@@ -1,0 +1,6 @@
+<?xml-model href="kapittel.xsd"?>
+<kapittel nummer="2" tittel="Dette er Kapittel 2">	
+<avsnitt>Dette er avsnitt 1.</avsnitt>	
+<avsnitt>Dette er avsnitt 2.</avsnitt>
+<avsnitt>Dette er avsnitt 3.</avsnitt>
+</kapittel>

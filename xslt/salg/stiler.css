@@ -1,0 +1,66 @@
+body {
+ background-color: #eee;
+ padding: 10px;
+}
+
+.standard_tabell {
+
+width: 900px;
+padding:15px;
+margin: auto;
+border: solid 2px black;
+border-radius: 10px;
+background-color: #49F;
+font-family: arial;
+font-size: 24px;
+box-shadow: 5px 10px 10px #888;
+}
+
+.standard_tabell th {
+background-color:#444;
+color: white;
+margin: 0px;
+}
+
+.standard_tabell td {
+ border: solid 1px #555;
+ padding: 5px;
+ margin: 0px;
+}
+
+.standard_tabell tr:nth-child(even){
+background-color: #38f;
+}
+
+.standard_tabell tr:hover {
+background-color: #ddd;
+}
+
+h2 {
+width: 900px;
+text-align: center;
+padding: 3px;
+background-color:#444;
+color:#fff;
+margin-left:auto;
+margin-right:auto;
+font-family: arial;
+font-weight: bold;
+font-size: 26px;
+
+}
+
+.right-adjust {
+text-align: right;
+}
+
+.center-adjust {
+text-align: center;
+}
+
+
+#tel-nummer {
+width:200px;
+}
+
+

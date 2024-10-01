@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="kapittel">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="avsnitt" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="nummer" type="xsd:integer"/>
+			<xsd:attribute name="tittel" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

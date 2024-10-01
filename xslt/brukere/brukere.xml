@@ -1,0 +1,6 @@
+<?xml-stylesheet type="text/xsl" href="brukere.xsl" ?>
+<brukere>
+ <bruker fornavn="Joe" etternavn="Fawcett" />
+ <bruker fornavn="Danny" etternavn="Ayers" />
+ <bruker fornavn="Catherine" etternavn="Middleton" />
+</brukere>

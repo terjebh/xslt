@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salg>
+   <oppsummering>
+      <totalsalg>220918.45</totalsalg>
+      <salgMenn>119517.95</salgMenn>
+      <salgKvinner>101400.5</salgKvinner>
+   </oppsummering>
+   <selger>
+      <fornavn>Dolly</fornavn>
+      <etternavn>Duck</etternavn>
+      <salg>55000</salg>
+   </selger>
+   <selger>
+      <fornavn>Ole</fornavn>
+      <etternavn>Aaberg</etternavn>
+      <salg>48767.45</salg>
+   </selger>
+   <selger>
+      <fornavn>Eva</fornavn>
+      <etternavn>Årnes</etternavn>
+      <salg>46400.5</salg>
+   </selger>
+   <selger>
+      <fornavn>Donald</fornavn>
+      <etternavn>Duck</etternavn>
+      <salg>40000.5</salg>
+   </selger>
+   <selger>
+      <fornavn>Petter</fornavn>
+      <etternavn>Smart</etternavn>
+      <salg>30750</salg>
+   </selger>
+   <selger>
+      <fornavn>Ole</fornavn>
+      <etternavn>Østlund</etternavn>
+      <salg>0</salg>
+   </selger>
+</salg>

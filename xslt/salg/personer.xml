@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personer>
+	<person id="1" kjønn="M">
+		<fornavn>Donald</fornavn>
+		<etternavn>Duck</etternavn>
+		<tel>+47 123456</tel>
+		<salg>5000</salg>
+		<salg>10000</salg>
+		<salg>25000.50</salg>
+	</person>
+	<person id="2" kjønn="K">
+		<fornavn>Dolly</fornavn>
+		<etternavn>Duck</etternavn>
+		<tel>+47 123456</tel>
+		<salg>20000</salg>
+		<salg>35000</salg>
+	</person>
+	<person id="2" kjønn="M">
+		<fornavn>Ole</fornavn>
+		<etternavn>Aaberg</etternavn>
+		<tel>+47 123456</tel>
+		<salg>24767.45</salg>
+		<salg>12000</salg>
+		<salg>12000</salg>
+	</person>
+	<person id="3" kjønn="M">
+		<fornavn>Petter</fornavn>
+		<etternavn>Smart</etternavn>
+		<tel>+1 432-654-576</tel>
+		<salg>5750</salg>
+		<salg>25000</salg>
+	</person>
+	<person id="4" kjønn="M">
+		<fornavn>Ole</fornavn>
+		<etternavn>Østlund</etternavn>
+		<tel>+1 123-345-567</tel>
+	</person>
+	<person id="4" kjønn="K">
+		<fornavn>Eva</fornavn>
+		<etternavn>Årnes</etternavn>
+		<tel>+47 77766655</tel>
+		<salg>23000</salg>
+		<salg>14800</salg>
+		<salg>8600.50</salg>
+	</person>
+
+</personer>
